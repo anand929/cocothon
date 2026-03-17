@@ -10,4 +10,4 @@ coco_dbt:
       warehouse: VW_COCO
       schema: PUBLIC
       threads: 4
-      authenticator: externalbrowser
+      authenticator: externalbrowser 
