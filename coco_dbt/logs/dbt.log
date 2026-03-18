@@ -1,0 +1,2106 @@
+
+
+============================== 03:17:30.628683 | 0a71e2f0-522c-418c-b100-3de64c6ce219 ==============================
+[0m03:17:30.628683 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m03:17:30.629706 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/tmp/dbt/', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt ', 'static_parser': 'True', 'target_path': '/tmp/dbt/target/', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m03:17:30.979110 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m03:17:31.526905 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m03:17:31.528374 [info ] [Dummy-1   ]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m03:17:32.649691 [info ] [Dummy-1   ]: Performance info: /tmp/dbt/target/perf_info.json
+[0m03:17:32.699852 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m03:17:32.701993 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m03:17:32.703686 [debug] [Dummy-1   ]: Resource report: {"command_name": "parse", "command_success": true, "command_wall_clock_time": 2.1693065, "process_in_blocks": "0", "process_kernel_time": 0.85, "process_mem_max_rss": "404696", "process_out_blocks": "0", "process_user_time": 5.14}
+[0m03:17:32.704354 [debug] [Dummy-1   ]: Command `cli parse` succeeded at 03:17:32.704083 after 2.17 seconds
+[0m03:17:32.704947 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 03:23:18.469931 | ddc02d52-ea6b-4152-be40-938c8717faba ==============================
+[0m03:23:18.469931 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m03:23:18.470926 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/tmp/dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt ', 'static_parser': 'True', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m03:23:18.828835 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m03:23:19.375995 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m03:23:19.535893 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m03:23:19.536691 [debug] [Dummy-1   ]: Partial parsing: added file: coco_dbt://models/bronze/sales_data_sample_json.sql
+[0m03:23:19.537251 [debug] [Dummy-1   ]: Partial parsing: added file: coco_dbt://models/bronze/sales_data_sample_csv.sql
+[0m03:23:20.173925 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m03:23:20.176296 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m03:23:20.216290 [info ] [Dummy-1   ]: Found 2 models, 475 macros
+[0m03:23:20.218548 [info ] [Dummy-1   ]: 
+[0m03:23:20.219106 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m03:23:20.219578 [info ] [Dummy-1   ]: 
+[0m03:23:20.220367 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m03:23:20.226988 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB_BRONZE'
+[0m03:23:20.332867 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m03:23:20.333482 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m03:23:20.333999 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:23:20.608698 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.274 seconds
+[0m03:23:20.614407 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m03:23:20.614968 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+show objects in COCO_DB.BRONZE
+    limit 10000
+    
+;
+[0m03:23:20.683763 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.068 seconds
+[0m03:23:20.686320 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m03:23:20.686864 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m03:23:20.738736 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.051 seconds
+[0m03:23:20.747673 [debug] [Thread-2 (]: Began running node model.coco_dbt.sales_data_sample_csv
+[0m03:23:20.748763 [debug] [Thread-3 (]: Began running node model.coco_dbt.sales_data_sample_json
+[0m03:23:20.749556 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_COCO_DB_BRONZE, now model.coco_dbt.sales_data_sample_csv)
+[0m03:23:20.750357 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.coco_dbt.sales_data_sample_json'
+[0m03:23:20.750989 [debug] [Thread-2 (]: Began compiling node model.coco_dbt.sales_data_sample_csv
+[0m03:23:20.751575 [debug] [Thread-3 (]: Began compiling node model.coco_dbt.sales_data_sample_json
+[0m03:23:20.764025 [debug] [Thread-2 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample_csv"
+[0m03:23:20.769592 [debug] [Thread-3 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample_json"
+[0m03:23:20.771059 [debug] [Thread-2 (]: Began executing node model.coco_dbt.sales_data_sample_csv
+[0m03:23:20.771653 [debug] [Thread-3 (]: Began executing node model.coco_dbt.sales_data_sample_json
+[0m03:23:20.772660 [debug] [Thread-2 (]: Finished running node model.coco_dbt.sales_data_sample_csv
+[0m03:23:20.773632 [debug] [Thread-3 (]: Finished running node model.coco_dbt.sales_data_sample_json
+[0m03:23:20.776350 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m03:23:20.776856 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample_csv' was properly closed.
+[0m03:23:20.777316 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample_json' was properly closed.
+[0m03:23:20.778411 [debug] [Dummy-1   ]: Command end result
+[0m03:23:20.805345 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m03:23:20.807460 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m03:23:20.816174 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m03:23:20.816697 [debug] [Dummy-1   ]: Excluded node 'sales_data_sample_json' from results
+[0m03:23:20.817330 [info ] [Dummy-1   ]: Compiled node 'sales_data_sample_csv' is:
+
+
+SELECT
+    $1::VARCHAR AS ordernumber,
+    $2::VARCHAR AS quantityordered,
+    $3::VARCHAR AS priceeach,
+    $4::VARCHAR AS orderlinenumber,
+    $5::VARCHAR AS sales,
+    $6::VARCHAR AS orderdate,
+    $7::VARCHAR AS status,
+    $8::VARCHAR AS qtr_id,
+    $9::VARCHAR AS month_id,
+    $10::VARCHAR AS year_id,
+    $11::VARCHAR AS productline,
+    $12::VARCHAR AS msrp,
+    $13::VARCHAR AS productcode,
+    $14::VARCHAR AS customername,
+    $15::VARCHAR AS phone,
+    $16::VARCHAR AS addressline1,
+    $17::VARCHAR AS addressline2,
+    $18::VARCHAR AS city,
+    $19::VARCHAR AS state,
+    $20::VARCHAR AS postalcode,
+    $21::VARCHAR AS country,
+    $22::VARCHAR AS territory,
+    $23::VARCHAR AS contactlastname,
+    $24::VARCHAR AS contactfirstname,
+    $25::VARCHAR AS dealsize
+FROM @source_db.public.stage_source_data/sales_data_sample.csv.gz
+(FILE_FORMAT => 'coco_db.public.csv_format')
+[0m03:23:20.819132 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 2.4452114, "process_in_blocks": "0", "process_kernel_time": 0.85, "process_mem_max_rss": "499004", "process_out_blocks": "0", "process_user_time": 5.12}
+[0m03:23:20.819828 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 03:23:20.819543 after 2.45 seconds
+[0m03:23:20.820372 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 06:32:39.112970 | 6a338be2-1c11-48b3-97bc-196c2cf56174 ==============================
+[0m06:32:39.112970 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m06:32:39.114034 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m06:32:39.466872 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m06:32:40.021171 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m06:32:40.206615 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 3 files added, 2 files changed.
+[0m06:32:40.207427 [debug] [Dummy-1   ]: Partial parsing: added file: coco_dbt://models/bronze/sales_data_sample.sql
+[0m06:32:40.207985 [debug] [Dummy-1   ]: Partial parsing: added file: coco_dbt://macros/get_stage_path.sql
+[0m06:32:40.208662 [debug] [Dummy-1   ]: Partial parsing: added file: coco_dbt://models/bronze/sources.yml
+[0m06:32:40.209295 [debug] [Dummy-1   ]: Partial parsing: updated file: coco_dbt://models/bronze/sales_data_sample_json.sql
+[0m06:32:40.209896 [debug] [Dummy-1   ]: Partial parsing: updated file: coco_dbt://models/bronze/sales_data_sample_csv.sql
+[0m06:32:41.023236 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m06:32:41.025585 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m06:32:41.073547 [info ] [Dummy-1   ]: Found 3 models, 1 source, 476 macros
+[0m06:32:41.075702 [info ] [Dummy-1   ]: 
+[0m06:32:41.076242 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m06:32:41.076701 [info ] [Dummy-1   ]: 
+[0m06:32:41.077458 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m06:32:41.084452 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB'
+[0m06:32:41.186703 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB"
+[0m06:32:41.187318 [debug] [ThreadPool]: On list_COCO_DB: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB"} */
+show terse schemas in database COCO_DB
+    limit 10000
+[0m06:32:41.187802 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:32:41.416503 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.229 seconds
+[0m06:32:41.420721 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB_BRONZE'
+[0m06:32:41.437042 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:32:41.437637 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m06:32:41.438172 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:32:41.669449 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.231 seconds
+[0m06:32:41.674994 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:32:41.675548 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+show objects in COCO_DB.BRONZE
+    limit 10000
+    
+;
+[0m06:32:41.731688 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.056 seconds
+[0m06:32:41.734029 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:32:41.734582 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m06:32:41.770440 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.035 seconds
+[0m06:32:41.778988 [debug] [Thread-2 (]: Began running node model.coco_dbt.sales_data_sample_csv
+[0m06:32:41.780033 [debug] [Thread-3 (]: Began running node model.coco_dbt.sales_data_sample_json
+[0m06:32:41.780928 [info ] [Thread-2 (]: 1 of 3 START sql table model BRONZE.sales_data_sample_csv ...................... [RUN]
+[0m06:32:41.781715 [info ] [Thread-3 (]: 2 of 3 START sql table model BRONZE.sales_data_sample_json ..................... [RUN]
+[0m06:32:41.782470 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_COCO_DB_BRONZE, now model.coco_dbt.sales_data_sample_csv)
+[0m06:32:41.783113 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_COCO_DB, now model.coco_dbt.sales_data_sample_json)
+[0m06:32:41.783725 [debug] [Thread-2 (]: Began compiling node model.coco_dbt.sales_data_sample_csv
+[0m06:32:41.784292 [debug] [Thread-3 (]: Began compiling node model.coco_dbt.sales_data_sample_json
+[0m06:32:41.796008 [debug] [Thread-2 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample_csv"
+[0m06:32:41.801770 [debug] [Thread-3 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample_json"
+[0m06:32:41.802927 [debug] [Thread-2 (]: Began executing node model.coco_dbt.sales_data_sample_csv
+[0m06:32:41.803578 [debug] [Thread-3 (]: Began executing node model.coco_dbt.sales_data_sample_json
+[0m06:32:41.864308 [debug] [Thread-2 (]: Writing runtime sql for node "model.coco_dbt.sales_data_sample_csv"
+[0m06:32:41.869361 [debug] [Thread-3 (]: Writing runtime sql for node "model.coco_dbt.sales_data_sample_json"
+[0m06:32:41.872333 [debug] [Thread-2 (]: Using snowflake connection "model.coco_dbt.sales_data_sample_csv"
+[0m06:32:41.874810 [debug] [Thread-3 (]: Using snowflake connection "model.coco_dbt.sales_data_sample_json"
+[0m06:32:41.875552 [debug] [Thread-2 (]: On model.coco_dbt.sales_data_sample_csv: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data_sample_csv"} */
+create or replace transient table COCO_DB.BRONZE.sales_data_sample_csv
+         as
+        (
+
+SELECT
+    $1::VARCHAR AS ordernumber,
+    $2::VARCHAR AS quantityordered,
+    $3::VARCHAR AS priceeach,
+    $4::VARCHAR AS orderlinenumber,
+    $5::VARCHAR AS sales,
+    $6::VARCHAR AS orderdate,
+    $7::VARCHAR AS status,
+    $8::VARCHAR AS qtr_id,
+    $9::VARCHAR AS month_id,
+    $10::VARCHAR AS year_id,
+    $11::VARCHAR AS productline,
+    $12::VARCHAR AS msrp,
+    $13::VARCHAR AS productcode,
+    $14::VARCHAR AS customername,
+    $15::VARCHAR AS phone,
+    $16::VARCHAR AS addressline1,
+    $17::VARCHAR AS addressline2,
+    $18::VARCHAR AS city,
+    $19::VARCHAR AS state,
+    $20::VARCHAR AS postalcode,
+    $21::VARCHAR AS country,
+    $22::VARCHAR AS territory,
+    $23::VARCHAR AS contactlastname,
+    $24::VARCHAR AS contactfirstname,
+    $25::VARCHAR AS dealsize,
+    'CSV' AS file_format,
+    CURRENT_TIMESTAMP() AS loaded_timestamp
+FROM 
+    @SOURCE_DB.PUBLIC.stage_source_data
+/sales_data_sample.csv.gz
+(FILE_FORMAT => 'coco_db.public.csv_format')
+        );
+[0m06:32:41.876382 [debug] [Thread-3 (]: On model.coco_dbt.sales_data_sample_json: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data_sample_json"} */
+create or replace transient table COCO_DB.BRONZE.sales_data_sample_json
+         as
+        (
+
+SELECT
+    $1:ORDERNUMBER::VARCHAR AS ordernumber,
+    $1:QUANTITYORDERED::VARCHAR AS quantityordered,
+    $1:PRICEEACH::VARCHAR AS priceeach,
+    $1:ORDERLINENUMBER::VARCHAR AS orderlinenumber,
+    $1:SALES::VARCHAR AS sales,
+    $1:ORDERDATE::VARCHAR AS orderdate,
+    $1:STATUS::VARCHAR AS status,
+    $1:QTR_ID::VARCHAR AS qtr_id,
+    $1:MONTH_ID::VARCHAR AS month_id,
+    $1:YEAR_ID::VARCHAR AS year_id,
+    $1:PRODUCTLINE::VARCHAR AS productline,
+    $1:MSRP::VARCHAR AS msrp,
+    $1:PRODUCTCODE::VARCHAR AS productcode,
+    $1:CUSTOMERNAME::VARCHAR AS customername,
+    $1:PHONE::VARCHAR AS phone,
+    $1:ADDRESSLINE1::VARCHAR AS addressline1,
+    $1:ADDRESSLINE2::VARCHAR AS addressline2,
+    $1:CITY::VARCHAR AS city,
+    $1:STATE::VARCHAR AS state,
+    $1:POSTALCODE::VARCHAR AS postalcode,
+    $1:COUNTRY::VARCHAR AS country,
+    $1:TERRITORY::VARCHAR AS territory,
+    $1:CONTACTLASTNAME::VARCHAR AS contactlastname,
+    $1:CONTACTFIRSTNAME::VARCHAR AS contactfirstname,
+    $1:DEALSIZE::VARCHAR AS dealsize,
+    'JSON' AS file_format,
+    CURRENT_TIMESTAMP() AS loaded_timestamp
+FROM 
+    @SOURCE_DB.PUBLIC.stage_source_data
+/sales_data_sample.json.gz
+(FILE_FORMAT => 'coco_db.public.json_format')
+        );
+[0m06:32:41.877068 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m06:32:41.877627 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m06:32:42.135079 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c31c6c-0001-adae-000c-984e00072546
+[0m06:32:42.136065 [debug] [Thread-3 (]: Snowflake adapter: Snowflake query id: 01c31c6c-0001-adae-000c-984e0007254a
+[0m06:32:42.136658 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 35 at position 0 unexpected '/'.
+syntax error line 37 at position 8 unexpected ')'.
+[0m06:32:42.137278 [debug] [Thread-3 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 35 at position 0 unexpected '/'.
+syntax error line 37 at position 8 unexpected ')'.
+[0m06:32:42.144755 [debug] [Thread-2 (]: Database Error in model sales_data_sample_csv (models/bronze/sales_data_sample_csv.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 35 at position 0 unexpected '/'.
+  syntax error line 37 at position 8 unexpected ')'.
+  compiled code at /tmp/dbt/target/run/coco_dbt/models/bronze/sales_data_sample_csv.sql
+[0m06:32:42.149689 [debug] [Thread-3 (]: Database Error in model sales_data_sample_json (models/bronze/sales_data_sample_json.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 35 at position 0 unexpected '/'.
+  syntax error line 37 at position 8 unexpected ')'.
+  compiled code at /tmp/dbt/target/run/coco_dbt/models/bronze/sales_data_sample_json.sql
+[0m06:32:42.152329 [error] [Thread-2 (]: 1 of 3 ERROR creating sql table model BRONZE.sales_data_sample_csv ............. [[31mERROR[0m in 0.36s]
+[0m06:32:42.152731 [error] [Thread-3 (]: 2 of 3 ERROR creating sql table model BRONZE.sales_data_sample_json ............ [[31mERROR[0m in 0.37s]
+[0m06:32:42.153636 [debug] [Thread-2 (]: Finished running node model.coco_dbt.sales_data_sample_csv
+[0m06:32:42.154604 [debug] [Thread-3 (]: Finished running node model.coco_dbt.sales_data_sample_json
+[0m06:32:42.155639 [debug] [Thread-8 (]: Marking all children of 'model.coco_dbt.sales_data_sample_csv' to be skipped because of status 'error'.  Reason: Database Error in model sales_data_sample_csv (models/bronze/sales_data_sample_csv.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 35 at position 0 unexpected '/'.
+  syntax error line 37 at position 8 unexpected ')'.
+  compiled code at /tmp/dbt/target/run/coco_dbt/models/bronze/sales_data_sample_csv.sql.
+[0m06:32:42.157445 [debug] [Thread-8 (]: Marking all children of 'model.coco_dbt.sales_data_sample_json' to be skipped because of status 'error'.  Reason: Database Error in model sales_data_sample_json (models/bronze/sales_data_sample_json.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 35 at position 0 unexpected '/'.
+  syntax error line 37 at position 8 unexpected ')'.
+  compiled code at /tmp/dbt/target/run/coco_dbt/models/bronze/sales_data_sample_json.sql.
+[0m06:32:42.158912 [debug] [Thread-5 (]: Began running node model.coco_dbt.sales_data_sample
+[0m06:32:42.159788 [info ] [Thread-5 (]: 3 of 3 SKIP relation BRONZE.sales_data_sample .................................. [[33mSKIP[0m]
+[0m06:32:42.160429 [debug] [Thread-5 (]: Finished running node model.coco_dbt.sales_data_sample
+[0m06:32:42.163294 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m06:32:42.163867 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample_json' was properly closed.
+[0m06:32:42.164319 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample_csv' was properly closed.
+[0m06:32:42.164900 [info ] [Dummy-1   ]: 
+[0m06:32:42.165418 [info ] [Dummy-1   ]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 1.09 seconds (1.09s).
+[0m06:32:42.166588 [debug] [Dummy-1   ]: Command end result
+[0m06:32:42.196613 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m06:32:42.198774 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m06:32:42.206203 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m06:32:42.206724 [info ] [Dummy-1   ]: 
+[0m06:32:42.207365 [info ] [Dummy-1   ]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m06:32:42.207852 [info ] [Dummy-1   ]: 
+[0m06:32:42.208586 [error] [Dummy-1   ]:   Database Error in model sales_data_sample_csv (models/bronze/sales_data_sample_csv.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 35 at position 0 unexpected '/'.
+  syntax error line 37 at position 8 unexpected ')'.
+  compiled code at /tmp/dbt/target/run/coco_dbt/models/bronze/sales_data_sample_csv.sql
+[0m06:32:42.209111 [info ] [Dummy-1   ]: 
+[0m06:32:42.209721 [error] [Dummy-1   ]:   Database Error in model sales_data_sample_json (models/bronze/sales_data_sample_json.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 35 at position 0 unexpected '/'.
+  syntax error line 37 at position 8 unexpected ')'.
+  compiled code at /tmp/dbt/target/run/coco_dbt/models/bronze/sales_data_sample_json.sql
+[0m06:32:42.210224 [info ] [Dummy-1   ]: 
+[0m06:32:42.210737 [info ] [Dummy-1   ]: Done. PASS=0 WARN=0 ERROR=2 SKIP=1 TOTAL=3
+[0m06:32:42.212512 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.1942554, "process_in_blocks": "0", "process_kernel_time": 1.06, "process_mem_max_rss": "496888", "process_out_blocks": "0", "process_user_time": 5.17}
+[0m06:32:42.213180 [debug] [Dummy-1   ]: Command `cli run` failed at 06:32:42.212915 after 3.20 seconds
+[0m06:32:42.213734 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 06:35:02.060746 | dec71931-44e7-4d4a-b57f-b906c10dd5c3 ==============================
+[0m06:35:02.060746 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m06:35:02.061895 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/tmp/dbt/', 'log_path': '/tmp/dbt/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': '/tmp/dbt/target/', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'False'}
+[0m06:35:02.432365 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m06:35:02.982055 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m06:35:03.222281 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m06:35:03.223262 [debug] [Dummy-1   ]: Partial parsing: updated file: coco_dbt://models/bronze/sales_data_sample_csv.sql
+[0m06:35:03.224155 [debug] [Dummy-1   ]: Partial parsing: updated file: coco_dbt://macros/get_stage_path.sql
+[0m06:35:03.668793 [error] [Dummy-1   ]: Encountered an error:
+Compilation Error in model sales_data_sample_csv (models/bronze/sales_data_sample_csv.sql)
+  unexpected '%'
+    line 37
+      FROM {{%- get_stage_path('source_db', 'stage_source_data') -%}}/sales_data_sample.csv.gz
+[0m06:35:03.670783 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.710045, "process_in_blocks": "0", "process_kernel_time": 0.88, "process_mem_max_rss": "402340", "process_out_blocks": "0", "process_user_time": 4.86}
+[0m06:35:03.671530 [debug] [Dummy-1   ]: Command `cli run` failed at 06:35:03.671240 after 1.71 seconds
+[0m06:35:03.672148 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 06:36:56.487919 | 82d93739-900e-43fc-84d0-bff4c4884c81 ==============================
+[0m06:36:56.487919 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m06:36:56.489096 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/tmp/dbt/logs', 'profiles_dir': '/tmp/dbt/', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': '/tmp/dbt/target/', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'False'}
+[0m06:36:56.858647 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m06:36:57.418079 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m06:36:57.666884 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m06:36:57.668086 [debug] [Dummy-1   ]: Partial parsing: updated file: coco_dbt://macros/get_stage_path.sql
+[0m06:36:58.368143 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m06:36:58.370895 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m06:36:58.412876 [info ] [Dummy-1   ]: Found 3 models, 1 source, 476 macros
+[0m06:36:58.415284 [info ] [Dummy-1   ]: 
+[0m06:36:58.415894 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m06:36:58.416375 [info ] [Dummy-1   ]: 
+[0m06:36:58.417202 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m06:36:58.424377 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB_BRONZE'
+[0m06:36:58.535221 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:36:58.535875 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m06:36:58.536403 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:36:58.834184 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.298 seconds
+[0m06:36:58.840085 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:36:58.840721 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+show objects in COCO_DB.BRONZE
+    limit 10000
+    
+;
+[0m06:36:58.934128 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.093 seconds
+[0m06:36:58.936926 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:36:58.937575 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m06:36:58.997490 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.059 seconds
+[0m06:36:59.007379 [debug] [Thread-2 (]: Began running node model.coco_dbt.sales_data_sample_csv
+[0m06:36:59.008258 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_COCO_DB_BRONZE, now model.coco_dbt.sales_data_sample_csv)
+[0m06:36:59.008967 [debug] [Thread-2 (]: Began compiling node model.coco_dbt.sales_data_sample_csv
+[0m06:36:59.021653 [debug] [Thread-2 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample_csv"
+[0m06:36:59.022606 [debug] [Thread-2 (]: Began executing node model.coco_dbt.sales_data_sample_csv
+[0m06:36:59.023687 [debug] [Thread-2 (]: Finished running node model.coco_dbt.sales_data_sample_csv
+[0m06:36:59.026254 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m06:36:59.026795 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample_csv' was properly closed.
+[0m06:36:59.027772 [debug] [Dummy-1   ]: Command end result
+[0m06:36:59.058366 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m06:36:59.060722 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m06:36:59.069896 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m06:36:59.070666 [info ] [Dummy-1   ]: Compiled node 'sales_data_sample_csv' is:
+
+
+SELECT
+    $1::VARCHAR AS ordernumber,
+    $2::VARCHAR AS quantityordered,
+    $3::VARCHAR AS priceeach,
+    $4::VARCHAR AS orderlinenumber,
+    $5::VARCHAR AS sales,
+    $6::VARCHAR AS orderdate,
+    $7::VARCHAR AS status,
+    $8::VARCHAR AS qtr_id,
+    $9::VARCHAR AS month_id,
+    $10::VARCHAR AS year_id,
+    $11::VARCHAR AS productline,
+    $12::VARCHAR AS msrp,
+    $13::VARCHAR AS productcode,
+    $14::VARCHAR AS customername,
+    $15::VARCHAR AS phone,
+    $16::VARCHAR AS addressline1,
+    $17::VARCHAR AS addressline2,
+    $18::VARCHAR AS city,
+    $19::VARCHAR AS state,
+    $20::VARCHAR AS postalcode,
+    $21::VARCHAR AS country,
+    $22::VARCHAR AS territory,
+    $23::VARCHAR AS contactlastname,
+    $24::VARCHAR AS contactfirstname,
+    $25::VARCHAR AS dealsize,
+    'CSV' AS file_format,
+    CURRENT_TIMESTAMP() AS loaded_timestamp
+FROM @SOURCE_DB.PUBLIC.stage_source_data/sales_data_sample.csv.gz
+(FILE_FORMAT => 'coco_db.public.csv_format')
+[0m06:36:59.072591 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 2.6843417, "process_in_blocks": "0", "process_kernel_time": 1.0, "process_mem_max_rss": "507480", "process_out_blocks": "0", "process_user_time": 5.42}
+[0m06:36:59.073345 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 06:36:59.073051 after 2.69 seconds
+[0m06:36:59.073920 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 06:39:48.879834 | bba0e46f-6aea-4763-9420-aa83306e5164 ==============================
+[0m06:39:48.879834 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m06:39:48.880884 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'profiles_dir': '/tmp/dbt/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m06:39:49.239951 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m06:39:49.793299 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m06:39:50.031422 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m06:39:50.032132 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m06:39:50.276914 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m06:39:50.279284 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m06:39:50.327610 [info ] [Dummy-1   ]: Found 3 models, 1 source, 476 macros
+[0m06:39:50.329923 [info ] [Dummy-1   ]: 
+[0m06:39:50.330470 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m06:39:50.330938 [info ] [Dummy-1   ]: 
+[0m06:39:50.331734 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m06:39:50.338629 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB'
+[0m06:39:50.443633 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB"
+[0m06:39:50.444295 [debug] [ThreadPool]: On list_COCO_DB: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB"} */
+show terse schemas in database COCO_DB
+    limit 10000
+[0m06:39:50.444802 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:39:50.807313 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.362 seconds
+[0m06:39:50.812455 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB_BRONZE'
+[0m06:39:50.830285 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:39:50.830904 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m06:39:50.831391 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:39:51.151256 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.320 seconds
+[0m06:39:51.156857 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:39:51.157418 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+show objects in COCO_DB.BRONZE
+    limit 10000
+    
+;
+[0m06:39:51.225958 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.068 seconds
+[0m06:39:51.228756 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:39:51.229300 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m06:39:51.285468 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.056 seconds
+[0m06:39:51.294215 [debug] [Thread-2 (]: Began running node model.coco_dbt.sales_data_sample_csv
+[0m06:39:51.294903 [debug] [Thread-3 (]: Began running node model.coco_dbt.sales_data_sample_json
+[0m06:39:51.295758 [info ] [Thread-2 (]: 1 of 3 START sql table model BRONZE.sales_data_sample_csv ...................... [RUN]
+[0m06:39:51.296537 [info ] [Thread-3 (]: 2 of 3 START sql table model BRONZE.sales_data_sample_json ..................... [RUN]
+[0m06:39:51.297272 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_COCO_DB_BRONZE, now model.coco_dbt.sales_data_sample_csv)
+[0m06:39:51.297927 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_COCO_DB, now model.coco_dbt.sales_data_sample_json)
+[0m06:39:51.298574 [debug] [Thread-2 (]: Began compiling node model.coco_dbt.sales_data_sample_csv
+[0m06:39:51.299155 [debug] [Thread-3 (]: Began compiling node model.coco_dbt.sales_data_sample_json
+[0m06:39:51.312432 [debug] [Thread-2 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample_csv"
+[0m06:39:51.318246 [debug] [Thread-3 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample_json"
+[0m06:39:51.319455 [debug] [Thread-2 (]: Began executing node model.coco_dbt.sales_data_sample_csv
+[0m06:39:51.326341 [debug] [Thread-3 (]: Began executing node model.coco_dbt.sales_data_sample_json
+[0m06:39:51.374081 [debug] [Thread-2 (]: Writing runtime sql for node "model.coco_dbt.sales_data_sample_csv"
+[0m06:39:51.386831 [debug] [Thread-3 (]: Writing runtime sql for node "model.coco_dbt.sales_data_sample_json"
+[0m06:39:51.389470 [debug] [Thread-2 (]: Using snowflake connection "model.coco_dbt.sales_data_sample_csv"
+[0m06:39:51.392131 [debug] [Thread-3 (]: Using snowflake connection "model.coco_dbt.sales_data_sample_json"
+[0m06:39:51.392811 [debug] [Thread-2 (]: On model.coco_dbt.sales_data_sample_csv: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data_sample_csv"} */
+create or replace transient table COCO_DB.BRONZE.sales_data_sample_csv
+         as
+        (
+
+SELECT
+    $1::VARCHAR AS ordernumber,
+    $2::VARCHAR AS quantityordered,
+    $3::VARCHAR AS priceeach,
+    $4::VARCHAR AS orderlinenumber,
+    $5::VARCHAR AS sales,
+    $6::VARCHAR AS orderdate,
+    $7::VARCHAR AS status,
+    $8::VARCHAR AS qtr_id,
+    $9::VARCHAR AS month_id,
+    $10::VARCHAR AS year_id,
+    $11::VARCHAR AS productline,
+    $12::VARCHAR AS msrp,
+    $13::VARCHAR AS productcode,
+    $14::VARCHAR AS customername,
+    $15::VARCHAR AS phone,
+    $16::VARCHAR AS addressline1,
+    $17::VARCHAR AS addressline2,
+    $18::VARCHAR AS city,
+    $19::VARCHAR AS state,
+    $20::VARCHAR AS postalcode,
+    $21::VARCHAR AS country,
+    $22::VARCHAR AS territory,
+    $23::VARCHAR AS contactlastname,
+    $24::VARCHAR AS contactfirstname,
+    $25::VARCHAR AS dealsize,
+    'CSV' AS file_format,
+    CURRENT_TIMESTAMP() AS loaded_timestamp
+FROM @SOURCE_DB.PUBLIC.stage_source_data/sales_data_sample.csv.gz
+(FILE_FORMAT => 'coco_db.public.csv_format')
+        );
+[0m06:39:51.393623 [debug] [Thread-3 (]: On model.coco_dbt.sales_data_sample_json: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data_sample_json"} */
+create or replace transient table COCO_DB.BRONZE.sales_data_sample_json
+         as
+        (
+
+SELECT
+    $1:ORDERNUMBER::VARCHAR AS ordernumber,
+    $1:QUANTITYORDERED::VARCHAR AS quantityordered,
+    $1:PRICEEACH::VARCHAR AS priceeach,
+    $1:ORDERLINENUMBER::VARCHAR AS orderlinenumber,
+    $1:SALES::VARCHAR AS sales,
+    $1:ORDERDATE::VARCHAR AS orderdate,
+    $1:STATUS::VARCHAR AS status,
+    $1:QTR_ID::VARCHAR AS qtr_id,
+    $1:MONTH_ID::VARCHAR AS month_id,
+    $1:YEAR_ID::VARCHAR AS year_id,
+    $1:PRODUCTLINE::VARCHAR AS productline,
+    $1:MSRP::VARCHAR AS msrp,
+    $1:PRODUCTCODE::VARCHAR AS productcode,
+    $1:CUSTOMERNAME::VARCHAR AS customername,
+    $1:PHONE::VARCHAR AS phone,
+    $1:ADDRESSLINE1::VARCHAR AS addressline1,
+    $1:ADDRESSLINE2::VARCHAR AS addressline2,
+    $1:CITY::VARCHAR AS city,
+    $1:STATE::VARCHAR AS state,
+    $1:POSTALCODE::VARCHAR AS postalcode,
+    $1:COUNTRY::VARCHAR AS country,
+    $1:TERRITORY::VARCHAR AS territory,
+    $1:CONTACTLASTNAME::VARCHAR AS contactlastname,
+    $1:CONTACTFIRSTNAME::VARCHAR AS contactfirstname,
+    $1:DEALSIZE::VARCHAR AS dealsize,
+    'JSON' AS file_format,
+    CURRENT_TIMESTAMP() AS loaded_timestamp
+FROM @SOURCE_DB.PUBLIC.stage_source_data/sales_data_sample.json.gz
+(FILE_FORMAT => 'coco_db.public.json_format')
+        );
+[0m06:39:51.394362 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m06:39:51.394954 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m06:39:52.497496 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.102 seconds
+[0m06:39:52.528563 [info ] [Thread-3 (]: 2 of 3 OK created sql table model BRONZE.sales_data_sample_json ................ [[32mSUCCESS 1[0m in 1.23s]
+[0m06:39:52.529573 [debug] [Thread-3 (]: Finished running node model.coco_dbt.sales_data_sample_json
+[0m06:39:52.599116 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.205 seconds
+[0m06:39:52.602325 [info ] [Thread-2 (]: 1 of 3 OK created sql table model BRONZE.sales_data_sample_csv ................. [[32mSUCCESS 1[0m in 1.30s]
+[0m06:39:52.603222 [debug] [Thread-2 (]: Finished running node model.coco_dbt.sales_data_sample_csv
+[0m06:39:52.604612 [debug] [Thread-5 (]: Began running node model.coco_dbt.sales_data_sample
+[0m06:39:52.605539 [info ] [Thread-5 (]: 3 of 3 START sql view model BRONZE.sales_data_sample ........................... [RUN]
+[0m06:39:52.606676 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.coco_dbt.sales_data_sample'
+[0m06:39:52.607265 [debug] [Thread-5 (]: Began compiling node model.coco_dbt.sales_data_sample
+[0m06:39:52.613543 [debug] [Thread-5 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample"
+[0m06:39:52.614335 [debug] [Thread-5 (]: Began executing node model.coco_dbt.sales_data_sample
+[0m06:39:52.655602 [debug] [Thread-5 (]: Writing runtime sql for node "model.coco_dbt.sales_data_sample"
+[0m06:39:52.656883 [debug] [Thread-5 (]: Using snowflake connection "model.coco_dbt.sales_data_sample"
+[0m06:39:52.657502 [debug] [Thread-5 (]: On model.coco_dbt.sales_data_sample: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data_sample"} */
+create or replace   view COCO_DB.BRONZE.sales_data_sample
+  
+   as (
+    
+
+SELECT * FROM COCO_DB.BRONZE.sales_data_sample_csv
+UNION ALL
+SELECT * FROM COCO_DB.BRONZE.sales_data_sample_json
+  );
+[0m06:39:52.658100 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m06:39:53.251574 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.593 seconds
+[0m06:39:53.255102 [info ] [Thread-5 (]: 3 of 3 OK created sql view model BRONZE.sales_data_sample ...................... [[32mSUCCESS 1[0m in 0.65s]
+[0m06:39:53.256054 [debug] [Thread-5 (]: Finished running node model.coco_dbt.sales_data_sample
+[0m06:39:53.260165 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m06:39:53.260741 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample_json' was properly closed.
+[0m06:39:53.261187 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample_csv' was properly closed.
+[0m06:39:53.261685 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample' was properly closed.
+[0m06:39:53.262315 [info ] [Dummy-1   ]: 
+[0m06:39:53.262835 [info ] [Dummy-1   ]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 2.93 seconds (2.93s).
+[0m06:39:53.264115 [debug] [Dummy-1   ]: Command end result
+[0m06:39:53.293990 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m06:39:53.296317 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m06:39:53.304354 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m06:39:53.304891 [info ] [Dummy-1   ]: 
+[0m06:39:53.305541 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m06:39:53.306084 [info ] [Dummy-1   ]: 
+[0m06:39:53.306609 [info ] [Dummy-1   ]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m06:39:53.308396 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.5244083, "process_in_blocks": "0", "process_kernel_time": 1.02, "process_mem_max_rss": "452276", "process_out_blocks": "0", "process_user_time": 5.0}
+[0m06:39:53.309081 [debug] [Dummy-1   ]: Command `cli run` succeeded at 06:39:53.308809 after 4.53 seconds
+[0m06:39:53.309645 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 06:41:50.011628 | 6ec4ddd5-5074-484e-91a4-f3b9b9797190 ==============================
+[0m06:41:50.011628 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m06:41:50.012658 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt ', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': '/tmp/dbt/target/', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m06:41:50.363645 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m06:41:50.907441 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m06:41:51.145656 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m06:41:51.146358 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m06:41:51.383164 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m06:41:51.385348 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m06:41:51.433953 [info ] [Dummy-1   ]: Found 3 models, 1 source, 476 macros
+[0m06:41:51.436239 [info ] [Dummy-1   ]: 
+[0m06:41:51.436796 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m06:41:51.437255 [info ] [Dummy-1   ]: 
+[0m06:41:51.438043 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m06:41:51.444976 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB'
+[0m06:41:51.549209 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB"
+[0m06:41:51.549818 [debug] [ThreadPool]: On list_COCO_DB: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB"} */
+show terse schemas in database COCO_DB
+    limit 10000
+[0m06:41:51.550318 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:41:51.845043 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.295 seconds
+[0m06:41:51.849375 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB_BRONZE'
+[0m06:41:51.866760 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:41:51.867343 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m06:41:51.867833 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:41:52.152552 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.284 seconds
+[0m06:41:52.158128 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:41:52.158760 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+show objects in COCO_DB.BRONZE
+    limit 10000
+    
+;
+[0m06:41:52.234394 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.075 seconds
+[0m06:41:52.236994 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:41:52.237543 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m06:41:52.283908 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.046 seconds
+[0m06:41:52.293358 [debug] [Thread-2 (]: Began running node model.coco_dbt.sales_data_sample_csv
+[0m06:41:52.294048 [debug] [Thread-3 (]: Began running node model.coco_dbt.sales_data_sample_json
+[0m06:41:52.294974 [info ] [Thread-2 (]: 1 of 3 START sql table model BRONZE.sales_data_sample_csv ...................... [RUN]
+[0m06:41:52.295792 [info ] [Thread-3 (]: 2 of 3 START sql table model BRONZE.sales_data_sample_json ..................... [RUN]
+[0m06:41:52.296542 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_COCO_DB_BRONZE, now model.coco_dbt.sales_data_sample_csv)
+[0m06:41:52.297188 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_COCO_DB, now model.coco_dbt.sales_data_sample_json)
+[0m06:41:52.297805 [debug] [Thread-2 (]: Began compiling node model.coco_dbt.sales_data_sample_csv
+[0m06:41:52.298402 [debug] [Thread-3 (]: Began compiling node model.coco_dbt.sales_data_sample_json
+[0m06:41:52.311664 [debug] [Thread-2 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample_csv"
+[0m06:41:52.317598 [debug] [Thread-3 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample_json"
+[0m06:41:52.318753 [debug] [Thread-2 (]: Began executing node model.coco_dbt.sales_data_sample_csv
+[0m06:41:52.325023 [debug] [Thread-3 (]: Began executing node model.coco_dbt.sales_data_sample_json
+[0m06:41:52.373255 [debug] [Thread-2 (]: Writing runtime sql for node "model.coco_dbt.sales_data_sample_csv"
+[0m06:41:52.385290 [debug] [Thread-3 (]: Writing runtime sql for node "model.coco_dbt.sales_data_sample_json"
+[0m06:41:52.387899 [debug] [Thread-2 (]: Using snowflake connection "model.coco_dbt.sales_data_sample_csv"
+[0m06:41:52.390544 [debug] [Thread-3 (]: Using snowflake connection "model.coco_dbt.sales_data_sample_json"
+[0m06:41:52.391292 [debug] [Thread-2 (]: On model.coco_dbt.sales_data_sample_csv: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data_sample_csv"} */
+create or replace transient table COCO_DB.BRONZE.sales_data_sample_csv
+         as
+        (
+
+SELECT
+    $1::VARCHAR AS ordernumber,
+    $2::VARCHAR AS quantityordered,
+    $3::VARCHAR AS priceeach,
+    $4::VARCHAR AS orderlinenumber,
+    $5::VARCHAR AS sales,
+    $6::VARCHAR AS orderdate,
+    $7::VARCHAR AS status,
+    $8::VARCHAR AS qtr_id,
+    $9::VARCHAR AS month_id,
+    $10::VARCHAR AS year_id,
+    $11::VARCHAR AS productline,
+    $12::VARCHAR AS msrp,
+    $13::VARCHAR AS productcode,
+    $14::VARCHAR AS customername,
+    $15::VARCHAR AS phone,
+    $16::VARCHAR AS addressline1,
+    $17::VARCHAR AS addressline2,
+    $18::VARCHAR AS city,
+    $19::VARCHAR AS state,
+    $20::VARCHAR AS postalcode,
+    $21::VARCHAR AS country,
+    $22::VARCHAR AS territory,
+    $23::VARCHAR AS contactlastname,
+    $24::VARCHAR AS contactfirstname,
+    $25::VARCHAR AS dealsize,
+    'CSV' AS file_format,
+    CURRENT_TIMESTAMP() AS loaded_timestamp
+FROM @SOURCE_DB.PUBLIC.stage_source_data/sales_data_sample.csv.gz
+(FILE_FORMAT => 'coco_db.public.csv_format')
+        );
+[0m06:41:52.392142 [debug] [Thread-3 (]: On model.coco_dbt.sales_data_sample_json: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data_sample_json"} */
+create or replace transient table COCO_DB.BRONZE.sales_data_sample_json
+         as
+        (
+
+SELECT
+    $1:ORDERNUMBER::VARCHAR AS ordernumber,
+    $1:QUANTITYORDERED::VARCHAR AS quantityordered,
+    $1:PRICEEACH::VARCHAR AS priceeach,
+    $1:ORDERLINENUMBER::VARCHAR AS orderlinenumber,
+    $1:SALES::VARCHAR AS sales,
+    $1:ORDERDATE::VARCHAR AS orderdate,
+    $1:STATUS::VARCHAR AS status,
+    $1:QTR_ID::VARCHAR AS qtr_id,
+    $1:MONTH_ID::VARCHAR AS month_id,
+    $1:YEAR_ID::VARCHAR AS year_id,
+    $1:PRODUCTLINE::VARCHAR AS productline,
+    $1:MSRP::VARCHAR AS msrp,
+    $1:PRODUCTCODE::VARCHAR AS productcode,
+    $1:CUSTOMERNAME::VARCHAR AS customername,
+    $1:PHONE::VARCHAR AS phone,
+    $1:ADDRESSLINE1::VARCHAR AS addressline1,
+    $1:ADDRESSLINE2::VARCHAR AS addressline2,
+    $1:CITY::VARCHAR AS city,
+    $1:STATE::VARCHAR AS state,
+    $1:POSTALCODE::VARCHAR AS postalcode,
+    $1:COUNTRY::VARCHAR AS country,
+    $1:TERRITORY::VARCHAR AS territory,
+    $1:CONTACTLASTNAME::VARCHAR AS contactlastname,
+    $1:CONTACTFIRSTNAME::VARCHAR AS contactfirstname,
+    $1:DEALSIZE::VARCHAR AS dealsize,
+    'JSON' AS file_format,
+    CURRENT_TIMESTAMP() AS loaded_timestamp
+FROM @SOURCE_DB.PUBLIC.stage_source_data/sales_data_sample.json.gz
+(FILE_FORMAT => 'coco_db.public.json_format')
+        );
+[0m06:41:52.392861 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m06:41:52.393458 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m06:41:53.431496 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.038 seconds
+[0m06:41:53.464088 [info ] [Thread-3 (]: 2 of 3 OK created sql table model BRONZE.sales_data_sample_json ................ [[32mSUCCESS 1[0m in 1.16s]
+[0m06:41:53.465017 [debug] [Thread-3 (]: Finished running node model.coco_dbt.sales_data_sample_json
+[0m06:41:53.472677 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.080 seconds
+[0m06:41:53.475908 [info ] [Thread-2 (]: 1 of 3 OK created sql table model BRONZE.sales_data_sample_csv ................. [[32mSUCCESS 1[0m in 1.18s]
+[0m06:41:53.476798 [debug] [Thread-2 (]: Finished running node model.coco_dbt.sales_data_sample_csv
+[0m06:41:53.478198 [debug] [Thread-5 (]: Began running node model.coco_dbt.sales_data_sample
+[0m06:41:53.479240 [info ] [Thread-5 (]: 3 of 3 START sql view model BRONZE.sales_data_sample ........................... [RUN]
+[0m06:41:53.480023 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.coco_dbt.sales_data_sample'
+[0m06:41:53.480579 [debug] [Thread-5 (]: Began compiling node model.coco_dbt.sales_data_sample
+[0m06:41:53.486762 [debug] [Thread-5 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample"
+[0m06:41:53.487561 [debug] [Thread-5 (]: Began executing node model.coco_dbt.sales_data_sample
+[0m06:41:53.528635 [debug] [Thread-5 (]: Writing runtime sql for node "model.coco_dbt.sales_data_sample"
+[0m06:41:53.529931 [debug] [Thread-5 (]: Using snowflake connection "model.coco_dbt.sales_data_sample"
+[0m06:41:53.530566 [debug] [Thread-5 (]: On model.coco_dbt.sales_data_sample: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data_sample"} */
+create or replace   view COCO_DB.BRONZE.sales_data_sample
+  
+   as (
+    
+
+SELECT * FROM COCO_DB.BRONZE.sales_data_sample_csv
+UNION ALL
+SELECT * FROM COCO_DB.BRONZE.sales_data_sample_json
+  );
+[0m06:41:53.531167 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m06:41:54.015842 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.484 seconds
+[0m06:41:54.019416 [info ] [Thread-5 (]: 3 of 3 OK created sql view model BRONZE.sales_data_sample ...................... [[32mSUCCESS 1[0m in 0.54s]
+[0m06:41:54.020345 [debug] [Thread-5 (]: Finished running node model.coco_dbt.sales_data_sample
+[0m06:41:54.023592 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m06:41:54.024217 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample_json' was properly closed.
+[0m06:41:54.024718 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample_csv' was properly closed.
+[0m06:41:54.025182 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample' was properly closed.
+[0m06:41:54.025772 [info ] [Dummy-1   ]: 
+[0m06:41:54.026298 [info ] [Dummy-1   ]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 2.59 seconds (2.59s).
+[0m06:41:54.027611 [debug] [Dummy-1   ]: Command end result
+[0m06:41:54.057013 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m06:41:54.059098 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m06:41:54.066812 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m06:41:54.067309 [info ] [Dummy-1   ]: 
+[0m06:41:54.067950 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m06:41:54.068465 [info ] [Dummy-1   ]: 
+[0m06:41:54.068997 [info ] [Dummy-1   ]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m06:41:54.070695 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.1535883, "process_in_blocks": "0", "process_kernel_time": 1.04, "process_mem_max_rss": "444672", "process_out_blocks": "0", "process_user_time": 4.85}
+[0m06:41:54.071384 [debug] [Dummy-1   ]: Command `cli run` succeeded at 06:41:54.071116 after 4.15 seconds
+[0m06:41:54.071920 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 06:42:16.149982 | f90c651d-f70b-4b8e-af04-d4fa2da8b366 ==============================
+[0m06:42:16.149982 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m06:42:16.151031 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': '/tmp/dbt/target/', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'False'}
+[0m06:42:16.507295 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m06:42:17.064092 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m06:42:17.306180 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m06:42:17.306860 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m06:42:17.548005 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m06:42:17.550314 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m06:42:17.599700 [info ] [Dummy-1   ]: Found 3 models, 1 source, 476 macros
+[0m06:42:17.602025 [info ] [Dummy-1   ]: 
+[0m06:42:17.602586 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m06:42:17.603105 [info ] [Dummy-1   ]: 
+[0m06:42:17.603921 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m06:42:17.610842 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB'
+[0m06:42:17.715184 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB"
+[0m06:42:17.715782 [debug] [ThreadPool]: On list_COCO_DB: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB"} */
+show terse schemas in database COCO_DB
+    limit 10000
+[0m06:42:17.716282 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:42:18.046959 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.331 seconds
+[0m06:42:18.051115 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB_BRONZE'
+[0m06:42:18.068333 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:42:18.068912 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m06:42:18.069396 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:42:18.402792 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.333 seconds
+[0m06:42:18.408270 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:42:18.408877 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+show objects in COCO_DB.BRONZE
+    limit 10000
+    
+;
+[0m06:42:18.490537 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.081 seconds
+[0m06:42:18.493151 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:42:18.493701 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m06:42:18.546164 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.052 seconds
+[0m06:42:18.555508 [debug] [Thread-2 (]: Began running node model.coco_dbt.sales_data_sample_csv
+[0m06:42:18.556205 [debug] [Thread-3 (]: Began running node model.coco_dbt.sales_data_sample_json
+[0m06:42:18.557061 [info ] [Thread-2 (]: 1 of 3 START sql table model BRONZE.sales_data_sample_csv ...................... [RUN]
+[0m06:42:18.557850 [info ] [Thread-3 (]: 2 of 3 START sql table model BRONZE.sales_data_sample_json ..................... [RUN]
+[0m06:42:18.558645 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_COCO_DB_BRONZE, now model.coco_dbt.sales_data_sample_csv)
+[0m06:42:18.559317 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_COCO_DB, now model.coco_dbt.sales_data_sample_json)
+[0m06:42:18.559922 [debug] [Thread-2 (]: Began compiling node model.coco_dbt.sales_data_sample_csv
+[0m06:42:18.560509 [debug] [Thread-3 (]: Began compiling node model.coco_dbt.sales_data_sample_json
+[0m06:42:18.573896 [debug] [Thread-2 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample_csv"
+[0m06:42:18.580059 [debug] [Thread-3 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample_json"
+[0m06:42:18.581128 [debug] [Thread-2 (]: Began executing node model.coco_dbt.sales_data_sample_csv
+[0m06:42:18.587850 [debug] [Thread-3 (]: Began executing node model.coco_dbt.sales_data_sample_json
+[0m06:42:18.636072 [debug] [Thread-2 (]: Writing runtime sql for node "model.coco_dbt.sales_data_sample_csv"
+[0m06:42:18.648993 [debug] [Thread-3 (]: Writing runtime sql for node "model.coco_dbt.sales_data_sample_json"
+[0m06:42:18.651803 [debug] [Thread-2 (]: Using snowflake connection "model.coco_dbt.sales_data_sample_csv"
+[0m06:42:18.652748 [debug] [Thread-2 (]: On model.coco_dbt.sales_data_sample_csv: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data_sample_csv"} */
+create or replace transient table COCO_DB.BRONZE.sales_data_sample_csv
+         as
+        (
+
+SELECT
+    $1::VARCHAR AS ordernumber,
+    $2::VARCHAR AS quantityordered,
+    $3::VARCHAR AS priceeach,
+    $4::VARCHAR AS orderlinenumber,
+    $5::VARCHAR AS sales,
+    $6::VARCHAR AS orderdate,
+    $7::VARCHAR AS status,
+    $8::VARCHAR AS qtr_id,
+    $9::VARCHAR AS month_id,
+    $10::VARCHAR AS year_id,
+    $11::VARCHAR AS productline,
+    $12::VARCHAR AS msrp,
+    $13::VARCHAR AS productcode,
+    $14::VARCHAR AS customername,
+    $15::VARCHAR AS phone,
+    $16::VARCHAR AS addressline1,
+    $17::VARCHAR AS addressline2,
+    $18::VARCHAR AS city,
+    $19::VARCHAR AS state,
+    $20::VARCHAR AS postalcode,
+    $21::VARCHAR AS country,
+    $22::VARCHAR AS territory,
+    $23::VARCHAR AS contactlastname,
+    $24::VARCHAR AS contactfirstname,
+    $25::VARCHAR AS dealsize,
+    'CSV' AS file_format,
+    CURRENT_TIMESTAMP() AS loaded_timestamp
+FROM @SOURCE_DB.PUBLIC.stage_source_data/sales_data_sample.csv.gz
+(FILE_FORMAT => 'coco_db.public.csv_format')
+        );
+[0m06:42:18.655320 [debug] [Thread-3 (]: Using snowflake connection "model.coco_dbt.sales_data_sample_json"
+[0m06:42:18.655974 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m06:42:18.656753 [debug] [Thread-3 (]: On model.coco_dbt.sales_data_sample_json: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data_sample_json"} */
+create or replace transient table COCO_DB.BRONZE.sales_data_sample_json
+         as
+        (
+
+SELECT
+    $1:ORDERNUMBER::VARCHAR AS ordernumber,
+    $1:QUANTITYORDERED::VARCHAR AS quantityordered,
+    $1:PRICEEACH::VARCHAR AS priceeach,
+    $1:ORDERLINENUMBER::VARCHAR AS orderlinenumber,
+    $1:SALES::VARCHAR AS sales,
+    $1:ORDERDATE::VARCHAR AS orderdate,
+    $1:STATUS::VARCHAR AS status,
+    $1:QTR_ID::VARCHAR AS qtr_id,
+    $1:MONTH_ID::VARCHAR AS month_id,
+    $1:YEAR_ID::VARCHAR AS year_id,
+    $1:PRODUCTLINE::VARCHAR AS productline,
+    $1:MSRP::VARCHAR AS msrp,
+    $1:PRODUCTCODE::VARCHAR AS productcode,
+    $1:CUSTOMERNAME::VARCHAR AS customername,
+    $1:PHONE::VARCHAR AS phone,
+    $1:ADDRESSLINE1::VARCHAR AS addressline1,
+    $1:ADDRESSLINE2::VARCHAR AS addressline2,
+    $1:CITY::VARCHAR AS city,
+    $1:STATE::VARCHAR AS state,
+    $1:POSTALCODE::VARCHAR AS postalcode,
+    $1:COUNTRY::VARCHAR AS country,
+    $1:TERRITORY::VARCHAR AS territory,
+    $1:CONTACTLASTNAME::VARCHAR AS contactlastname,
+    $1:CONTACTFIRSTNAME::VARCHAR AS contactfirstname,
+    $1:DEALSIZE::VARCHAR AS dealsize,
+    'JSON' AS file_format,
+    CURRENT_TIMESTAMP() AS loaded_timestamp
+FROM @SOURCE_DB.PUBLIC.stage_source_data/sales_data_sample.json.gz
+(FILE_FORMAT => 'coco_db.public.json_format')
+        );
+[0m06:42:18.657639 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m06:42:19.617959 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.960 seconds
+[0m06:42:19.648903 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.993 seconds
+[0m06:42:19.654603 [info ] [Thread-3 (]: 2 of 3 OK created sql table model BRONZE.sales_data_sample_json ................ [[32mSUCCESS 1[0m in 1.09s]
+[0m06:42:19.655520 [info ] [Thread-2 (]: 1 of 3 OK created sql table model BRONZE.sales_data_sample_csv ................. [[32mSUCCESS 1[0m in 1.10s]
+[0m06:42:19.656457 [debug] [Thread-3 (]: Finished running node model.coco_dbt.sales_data_sample_json
+[0m06:42:19.657307 [debug] [Thread-2 (]: Finished running node model.coco_dbt.sales_data_sample_csv
+[0m06:42:19.659068 [debug] [Thread-5 (]: Began running node model.coco_dbt.sales_data_sample
+[0m06:42:19.660065 [info ] [Thread-5 (]: 3 of 3 START sql view model BRONZE.sales_data_sample ........................... [RUN]
+[0m06:42:19.660875 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.coco_dbt.sales_data_sample'
+[0m06:42:19.661449 [debug] [Thread-5 (]: Began compiling node model.coco_dbt.sales_data_sample
+[0m06:42:19.667746 [debug] [Thread-5 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample"
+[0m06:42:19.668578 [debug] [Thread-5 (]: Began executing node model.coco_dbt.sales_data_sample
+[0m06:42:19.710560 [debug] [Thread-5 (]: Writing runtime sql for node "model.coco_dbt.sales_data_sample"
+[0m06:42:19.711944 [debug] [Thread-5 (]: Using snowflake connection "model.coco_dbt.sales_data_sample"
+[0m06:42:19.712589 [debug] [Thread-5 (]: On model.coco_dbt.sales_data_sample: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data_sample"} */
+create or replace   view COCO_DB.BRONZE.sales_data_sample
+  
+   as (
+    
+
+SELECT * FROM COCO_DB.BRONZE.sales_data_sample_csv
+UNION ALL
+SELECT * FROM COCO_DB.BRONZE.sales_data_sample_json
+  );
+[0m06:42:19.713165 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m06:42:20.234056 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.521 seconds
+[0m06:42:20.237688 [info ] [Thread-5 (]: 3 of 3 OK created sql view model BRONZE.sales_data_sample ...................... [[32mSUCCESS 1[0m in 0.58s]
+[0m06:42:20.238662 [debug] [Thread-5 (]: Finished running node model.coco_dbt.sales_data_sample
+[0m06:42:20.241723 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m06:42:20.242668 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample_json' was properly closed.
+[0m06:42:20.243155 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample_csv' was properly closed.
+[0m06:42:20.243604 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample' was properly closed.
+[0m06:42:20.244200 [info ] [Dummy-1   ]: 
+[0m06:42:20.244723 [info ] [Dummy-1   ]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 2.64 seconds (2.64s).
+[0m06:42:20.246033 [debug] [Dummy-1   ]: Command end result
+[0m06:42:20.275542 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m06:42:20.277591 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m06:42:20.285367 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m06:42:20.285879 [info ] [Dummy-1   ]: 
+[0m06:42:20.286526 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m06:42:20.287061 [info ] [Dummy-1   ]: 
+[0m06:42:20.287593 [info ] [Dummy-1   ]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m06:42:20.289364 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.235481, "process_in_blocks": "0", "process_kernel_time": 1.0, "process_mem_max_rss": "445972", "process_out_blocks": "0", "process_user_time": 5.03}
+[0m06:42:20.290032 [debug] [Dummy-1   ]: Command `cli run` succeeded at 06:42:20.289767 after 4.24 seconds
+[0m06:42:20.290571 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 06:55:03.721281 | 148d7624-2120-4274-b7c8-5cac036106b1 ==============================
+[0m06:55:03.721281 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m06:55:03.722323 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'profiles_dir': '/tmp/dbt/', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m06:55:04.075600 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m06:55:04.616737 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m06:55:04.855144 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m06:55:04.856107 [debug] [Dummy-1   ]: Partial parsing: updated file: coco_dbt://models/bronze/sales_data_sample.sql
+[0m06:55:05.499259 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m06:55:05.501520 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m06:55:05.540514 [info ] [Dummy-1   ]: Found 3 models, 1 source, 476 macros
+[0m06:55:05.542703 [info ] [Dummy-1   ]: 
+[0m06:55:05.543243 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m06:55:05.543701 [info ] [Dummy-1   ]: 
+[0m06:55:05.544459 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m06:55:05.551212 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB_BRONZE'
+[0m06:55:05.658753 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:55:05.659425 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m06:55:05.659960 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:55:06.625167 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.965 seconds
+[0m06:55:06.630868 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:55:06.631420 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+show objects in COCO_DB.BRONZE
+    limit 10000
+    
+;
+[0m06:55:06.738771 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.107 seconds
+[0m06:55:06.741474 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m06:55:06.742017 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m06:55:06.822503 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.080 seconds
+[0m06:55:06.832851 [debug] [Thread-2 (]: Began running node model.coco_dbt.sales_data_sample
+[0m06:55:06.834630 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_COCO_DB_BRONZE, now model.coco_dbt.sales_data_sample)
+[0m06:55:06.835245 [debug] [Thread-2 (]: Began compiling node model.coco_dbt.sales_data_sample
+[0m06:55:06.847435 [debug] [Thread-2 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample"
+[0m06:55:06.848279 [debug] [Thread-2 (]: Began executing node model.coco_dbt.sales_data_sample
+[0m06:55:06.849351 [debug] [Thread-2 (]: Finished running node model.coco_dbt.sales_data_sample
+[0m06:55:06.851819 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m06:55:06.852318 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample' was properly closed.
+[0m06:55:06.853235 [debug] [Dummy-1   ]: Command end result
+[0m06:55:06.880582 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m06:55:06.882662 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m06:55:06.891324 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m06:55:06.892149 [info ] [Dummy-1   ]: Compiled node 'sales_data_sample' is:
+
+
+SELECT
+    ordernumber::INTEGER AS ordernumber,
+    quantityordered::INTEGER AS quantityordered,
+    priceeach::DECIMAL(10,2) AS priceeach,
+    orderlinenumber::INTEGER AS orderlinenumber,
+    sales::DECIMAL(12,2) AS sales,
+    TRY_TO_TIMESTAMP(orderdate, 'MM/DD/YYYY HH24:MI') AS orderdate,
+    status::VARCHAR AS status,
+    qtr_id::INTEGER AS qtr_id,
+    month_id::INTEGER AS month_id,
+    year_id::INTEGER AS year_id,
+    productline::VARCHAR AS productline,
+    msrp::INTEGER AS msrp,
+    productcode::VARCHAR AS productcode,
+    customername::VARCHAR AS customername,
+    phone::VARCHAR AS phone,
+    addressline1::VARCHAR AS addressline1,
+    addressline2::VARCHAR AS addressline2,
+    city::VARCHAR AS city,
+    state::VARCHAR AS state,
+    postalcode::VARCHAR AS postalcode,
+    country::VARCHAR AS country,
+    territory::VARCHAR AS territory,
+    contactlastname::VARCHAR AS contactlastname,
+    contactfirstname::VARCHAR AS contactfirstname,
+    dealsize::VARCHAR AS dealsize,
+    file_format::VARCHAR AS file_format,
+    loaded_timestamp::TIMESTAMP_NTZ AS loaded_timestamp
+FROM COCO_DB.BRONZE.sales_data_sample_csv
+
+UNION ALL
+
+SELECT
+    ordernumber::INTEGER AS ordernumber,
+    quantityordered::INTEGER AS quantityordered,
+    priceeach::DECIMAL(10,2) AS priceeach,
+    orderlinenumber::INTEGER AS orderlinenumber,
+    sales::DECIMAL(12,2) AS sales,
+    TRY_TO_TIMESTAMP(orderdate, 'MM/DD/YYYY HH24:MI') AS orderdate,
+    status::VARCHAR AS status,
+    qtr_id::INTEGER AS qtr_id,
+    month_id::INTEGER AS month_id,
+    year_id::INTEGER AS year_id,
+    productline::VARCHAR AS productline,
+    msrp::INTEGER AS msrp,
+    productcode::VARCHAR AS productcode,
+    customername::VARCHAR AS customername,
+    phone::VARCHAR AS phone,
+    addressline1::VARCHAR AS addressline1,
+    addressline2::VARCHAR AS addressline2,
+    city::VARCHAR AS city,
+    state::VARCHAR AS state,
+    postalcode::VARCHAR AS postalcode,
+    country::VARCHAR AS country,
+    territory::VARCHAR AS territory,
+    contactlastname::VARCHAR AS contactlastname,
+    contactfirstname::VARCHAR AS contactfirstname,
+    dealsize::VARCHAR AS dealsize,
+    file_format::VARCHAR AS file_format,
+    loaded_timestamp::TIMESTAMP_NTZ AS loaded_timestamp
+FROM COCO_DB.BRONZE.sales_data_sample_json
+[0m06:55:06.894058 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 3.268503, "process_in_blocks": "0", "process_kernel_time": 0.88, "process_mem_max_rss": "497920", "process_out_blocks": "0", "process_user_time": 5.12}
+[0m06:55:06.894737 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 06:55:06.894466 after 3.27 seconds
+[0m06:55:06.895282 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 07:37:54.000836 | c0c5d2fd-17ae-488b-94af-b385b5e10cae ==============================
+[0m07:37:54.000836 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m07:37:54.001883 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'debug': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': '/tmp/dbt/target/', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'False'}
+[0m07:37:54.355791 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m07:37:54.902853 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m07:37:55.140589 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m07:37:55.141498 [debug] [Dummy-1   ]: Partial parsing: added file: coco_dbt://models/bronze/sales_data.sql
+[0m07:37:55.792037 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m07:37:55.794220 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m07:37:55.831310 [info ] [Dummy-1   ]: Found 4 models, 1 source, 476 macros
+[0m07:37:55.833471 [info ] [Dummy-1   ]: 
+[0m07:37:55.834006 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m07:37:55.834471 [info ] [Dummy-1   ]: 
+[0m07:37:55.835247 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m07:37:55.841899 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB_BRONZE'
+[0m07:37:55.948568 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m07:37:55.949197 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m07:37:55.949700 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:37:56.224657 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.275 seconds
+[0m07:37:56.230595 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m07:37:56.231216 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+show objects in COCO_DB.BRONZE
+    limit 10000
+    
+;
+[0m07:37:56.289460 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.058 seconds
+[0m07:37:56.292161 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m07:37:56.292722 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m07:37:56.338758 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.045 seconds
+[0m07:37:56.348635 [debug] [Thread-2 (]: Began running node model.coco_dbt.sales_data
+[0m07:37:56.350276 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_COCO_DB_BRONZE, now model.coco_dbt.sales_data)
+[0m07:37:56.350870 [debug] [Thread-2 (]: Began compiling node model.coco_dbt.sales_data
+[0m07:37:56.362847 [debug] [Thread-2 (]: Writing injected SQL for node "model.coco_dbt.sales_data"
+[0m07:37:56.363669 [debug] [Thread-2 (]: Began executing node model.coco_dbt.sales_data
+[0m07:37:56.364630 [debug] [Thread-2 (]: Finished running node model.coco_dbt.sales_data
+[0m07:37:56.367173 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m07:37:56.367670 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data' was properly closed.
+[0m07:37:56.368585 [debug] [Dummy-1   ]: Command end result
+[0m07:37:56.396349 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m07:37:56.398498 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m07:37:56.406989 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m07:37:56.407865 [info ] [Dummy-1   ]: Compiled node 'sales_data' is:
+
+
+WITH country_codes AS (
+    SELECT column1 AS country, column2 AS country_code FROM (VALUES
+        ('USA', '+1'),
+        ('Canada', '+1'),
+        ('France', '+33'),
+        ('Spain', '+34'),
+        ('Australia', '+61'),
+        ('UK', '+44'),
+        ('Germany', '+49'),
+        ('Italy', '+39'),
+        ('Japan', '+81'),
+        ('Singapore', '+65'),
+        ('Philippines', '+63'),
+        ('Denmark', '+45'),
+        ('Sweden', '+46'),
+        ('Finland', '+358'),
+        ('Norway', '+47'),
+        ('Austria', '+43'),
+        ('Belgium', '+32'),
+        ('Switzerland', '+41'),
+        ('Ireland', '+353'),
+        ('New Zealand', '+64')
+    )
+),
+
+source_data AS (
+    SELECT * FROM COCO_DB.BRONZE.sales_data_sample_csv
+    UNION ALL
+    SELECT * FROM COCO_DB.BRONZE.sales_data_sample_json
+),
+
+cleaned AS (
+    SELECT
+        s.*,
+        cc.country_code,
+        REGEXP_REPLACE(s.phone, '[^0-9]', '') AS phone_digits
+    FROM source_data s
+    LEFT JOIN country_codes cc ON s.country = cc.country
+)
+
+SELECT
+    ordernumber::INTEGER AS ordernumber,
+    quantityordered::INTEGER AS quantityordered,
+    priceeach::DECIMAL(10,2) AS priceeach,
+    orderlinenumber::INTEGER AS orderlinenumber,
+    sales::DECIMAL(12,2) AS sales,
+    TRY_TO_TIMESTAMP(orderdate, 'MM/DD/YYYY HH24:MI') AS orderdate,
+    status::VARCHAR AS status,
+    qtr_id::INTEGER AS qtr_id,
+    month_id::INTEGER AS month_id,
+    year_id::INTEGER AS year_id,
+    productline::VARCHAR AS productline,
+    msrp::INTEGER AS msrp,
+    productcode::VARCHAR AS productcode,
+    customername::VARCHAR AS customername,
+    CASE
+        WHEN LENGTH(phone_digits) >= 10 THEN
+            COALESCE(country_code, '+1') || ' ' ||
+            SUBSTRING(phone_digits, LENGTH(phone_digits) - 9, 3) || '-' ||
+            SUBSTRING(phone_digits, LENGTH(phone_digits) - 6, 3) || '-' ||
+            SUBSTRING(phone_digits, LENGTH(phone_digits) - 3, 4)
+        ELSE phone
+    END::VARCHAR AS phone,
+    addressline1::VARCHAR AS addressline1,
+    addressline2::VARCHAR AS addressline2,
+    city::VARCHAR AS city,
+    state::VARCHAR AS state,
+    postalcode::VARCHAR AS postalcode,
+    country::VARCHAR AS country,
+    territory::VARCHAR AS territory,
+    contactlastname::VARCHAR AS contactlastname,
+    contactfirstname::VARCHAR AS contactfirstname,
+    dealsize::VARCHAR AS dealsize,
+    file_format::VARCHAR AS file_format,
+    loaded_timestamp::TIMESTAMP_NTZ AS loaded_timestamp
+FROM cleaned
+[0m07:37:56.409734 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 2.503652, "process_in_blocks": "0", "process_kernel_time": 0.87, "process_mem_max_rss": "498192", "process_out_blocks": "0", "process_user_time": 5.21}
+[0m07:37:56.410405 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 07:37:56.410141 after 2.50 seconds
+[0m07:37:56.410939 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 07:45:41.140729 | 557f6cf8-2021-45eb-8ff7-d576b8a75581 ==============================
+[0m07:45:41.140729 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m07:45:41.141854 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/tmp/dbt/', 'log_path': '/tmp/dbt/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m07:45:41.500630 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m07:45:42.056769 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m07:45:42.289341 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m07:45:42.290033 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m07:45:42.546233 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m07:45:42.548872 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m07:45:42.600189 [info ] [Dummy-1   ]: Found 4 models, 1 source, 476 macros
+[0m07:45:42.602453 [info ] [Dummy-1   ]: 
+[0m07:45:42.603024 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m07:45:42.603486 [info ] [Dummy-1   ]: 
+[0m07:45:42.604281 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m07:45:42.611516 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB'
+[0m07:45:42.717911 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB"
+[0m07:45:42.718581 [debug] [ThreadPool]: On list_COCO_DB: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB"} */
+show terse schemas in database COCO_DB
+    limit 10000
+[0m07:45:42.719104 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:45:43.103888 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.385 seconds
+[0m07:45:43.108723 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB_BRONZE'
+[0m07:45:43.126598 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m07:45:43.127212 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m07:45:43.127696 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:45:43.531808 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.404 seconds
+[0m07:45:43.537570 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m07:45:43.538144 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+show objects in COCO_DB.BRONZE
+    limit 10000
+    
+;
+[0m07:45:43.612999 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.074 seconds
+[0m07:45:43.615991 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m07:45:43.616564 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m07:45:43.682829 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.066 seconds
+[0m07:45:43.692854 [debug] [Thread-2 (]: Began running node model.coco_dbt.sales_data_sample_csv
+[0m07:45:43.693607 [debug] [Thread-3 (]: Began running node model.coco_dbt.sales_data_sample_json
+[0m07:45:43.694527 [info ] [Thread-2 (]: 1 of 4 START sql table model BRONZE.sales_data_sample_csv ...................... [RUN]
+[0m07:45:43.695332 [info ] [Thread-3 (]: 2 of 4 START sql table model BRONZE.sales_data_sample_json ..................... [RUN]
+[0m07:45:43.696092 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_COCO_DB_BRONZE, now model.coco_dbt.sales_data_sample_csv)
+[0m07:45:43.696731 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_COCO_DB, now model.coco_dbt.sales_data_sample_json)
+[0m07:45:43.697344 [debug] [Thread-2 (]: Began compiling node model.coco_dbt.sales_data_sample_csv
+[0m07:45:43.697936 [debug] [Thread-3 (]: Began compiling node model.coco_dbt.sales_data_sample_json
+[0m07:45:43.711528 [debug] [Thread-2 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample_csv"
+[0m07:45:43.717776 [debug] [Thread-3 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample_json"
+[0m07:45:43.718923 [debug] [Thread-2 (]: Began executing node model.coco_dbt.sales_data_sample_csv
+[0m07:45:43.719619 [debug] [Thread-3 (]: Began executing node model.coco_dbt.sales_data_sample_json
+[0m07:45:43.780372 [debug] [Thread-2 (]: Writing runtime sql for node "model.coco_dbt.sales_data_sample_csv"
+[0m07:45:43.789040 [debug] [Thread-3 (]: Writing runtime sql for node "model.coco_dbt.sales_data_sample_json"
+[0m07:45:43.791936 [debug] [Thread-2 (]: Using snowflake connection "model.coco_dbt.sales_data_sample_csv"
+[0m07:45:43.792856 [debug] [Thread-2 (]: On model.coco_dbt.sales_data_sample_csv: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data_sample_csv"} */
+create or replace transient table COCO_DB.BRONZE.sales_data_sample_csv
+         as
+        (
+
+SELECT
+    $1::VARCHAR AS ordernumber,
+    $2::VARCHAR AS quantityordered,
+    $3::VARCHAR AS priceeach,
+    $4::VARCHAR AS orderlinenumber,
+    $5::VARCHAR AS sales,
+    $6::VARCHAR AS orderdate,
+    $7::VARCHAR AS status,
+    $8::VARCHAR AS qtr_id,
+    $9::VARCHAR AS month_id,
+    $10::VARCHAR AS year_id,
+    $11::VARCHAR AS productline,
+    $12::VARCHAR AS msrp,
+    $13::VARCHAR AS productcode,
+    $14::VARCHAR AS customername,
+    $15::VARCHAR AS phone,
+    $16::VARCHAR AS addressline1,
+    $17::VARCHAR AS addressline2,
+    $18::VARCHAR AS city,
+    $19::VARCHAR AS state,
+    $20::VARCHAR AS postalcode,
+    $21::VARCHAR AS country,
+    $22::VARCHAR AS territory,
+    $23::VARCHAR AS contactlastname,
+    $24::VARCHAR AS contactfirstname,
+    $25::VARCHAR AS dealsize,
+    'CSV' AS file_format,
+    CURRENT_TIMESTAMP() AS loaded_timestamp
+FROM @SOURCE_DB.PUBLIC.stage_source_data/sales_data_sample.csv.gz
+(FILE_FORMAT => 'coco_db.public.csv_format')
+        );
+[0m07:45:43.795442 [debug] [Thread-3 (]: Using snowflake connection "model.coco_dbt.sales_data_sample_json"
+[0m07:45:43.796066 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m07:45:43.796826 [debug] [Thread-3 (]: On model.coco_dbt.sales_data_sample_json: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data_sample_json"} */
+create or replace transient table COCO_DB.BRONZE.sales_data_sample_json
+         as
+        (
+
+SELECT
+    $1:ORDERNUMBER::VARCHAR AS ordernumber,
+    $1:QUANTITYORDERED::VARCHAR AS quantityordered,
+    $1:PRICEEACH::VARCHAR AS priceeach,
+    $1:ORDERLINENUMBER::VARCHAR AS orderlinenumber,
+    $1:SALES::VARCHAR AS sales,
+    $1:ORDERDATE::VARCHAR AS orderdate,
+    $1:STATUS::VARCHAR AS status,
+    $1:QTR_ID::VARCHAR AS qtr_id,
+    $1:MONTH_ID::VARCHAR AS month_id,
+    $1:YEAR_ID::VARCHAR AS year_id,
+    $1:PRODUCTLINE::VARCHAR AS productline,
+    $1:MSRP::VARCHAR AS msrp,
+    $1:PRODUCTCODE::VARCHAR AS productcode,
+    $1:CUSTOMERNAME::VARCHAR AS customername,
+    $1:PHONE::VARCHAR AS phone,
+    $1:ADDRESSLINE1::VARCHAR AS addressline1,
+    $1:ADDRESSLINE2::VARCHAR AS addressline2,
+    $1:CITY::VARCHAR AS city,
+    $1:STATE::VARCHAR AS state,
+    $1:POSTALCODE::VARCHAR AS postalcode,
+    $1:COUNTRY::VARCHAR AS country,
+    $1:TERRITORY::VARCHAR AS territory,
+    $1:CONTACTLASTNAME::VARCHAR AS contactlastname,
+    $1:CONTACTFIRSTNAME::VARCHAR AS contactfirstname,
+    $1:DEALSIZE::VARCHAR AS dealsize,
+    'JSON' AS file_format,
+    CURRENT_TIMESTAMP() AS loaded_timestamp
+FROM @SOURCE_DB.PUBLIC.stage_source_data/sales_data_sample.json.gz
+(FILE_FORMAT => 'coco_db.public.json_format')
+        );
+[0m07:45:43.797683 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m07:45:44.923701 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.126 seconds
+[0m07:45:44.939609 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.143 seconds
+[0m07:45:44.962598 [info ] [Thread-3 (]: 2 of 4 OK created sql table model BRONZE.sales_data_sample_json ................ [[32mSUCCESS 1[0m in 1.26s]
+[0m07:45:44.963530 [info ] [Thread-2 (]: 1 of 4 OK created sql table model BRONZE.sales_data_sample_csv ................. [[32mSUCCESS 1[0m in 1.26s]
+[0m07:45:44.964449 [debug] [Thread-3 (]: Finished running node model.coco_dbt.sales_data_sample_json
+[0m07:45:44.965326 [debug] [Thread-2 (]: Finished running node model.coco_dbt.sales_data_sample_csv
+[0m07:45:44.966958 [debug] [Thread-5 (]: Began running node model.coco_dbt.sales_data
+[0m07:45:44.967637 [debug] [Thread-4 (]: Began running node model.coco_dbt.sales_data_sample
+[0m07:45:44.968564 [info ] [Thread-5 (]: 3 of 4 START sql view model BRONZE.sales_data .................................. [RUN]
+[0m07:45:44.969432 [info ] [Thread-4 (]: 4 of 4 START sql view model BRONZE.sales_data_sample ........................... [RUN]
+[0m07:45:44.970348 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.coco_dbt.sales_data'
+[0m07:45:44.971083 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.coco_dbt.sales_data_sample'
+[0m07:45:44.971689 [debug] [Thread-5 (]: Began compiling node model.coco_dbt.sales_data
+[0m07:45:44.972255 [debug] [Thread-4 (]: Began compiling node model.coco_dbt.sales_data_sample
+[0m07:45:44.979576 [debug] [Thread-5 (]: Writing injected SQL for node "model.coco_dbt.sales_data"
+[0m07:45:44.986524 [debug] [Thread-4 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample"
+[0m07:45:44.987549 [debug] [Thread-5 (]: Began executing node model.coco_dbt.sales_data
+[0m07:45:44.993682 [debug] [Thread-4 (]: Began executing node model.coco_dbt.sales_data_sample
+[0m07:45:45.048876 [debug] [Thread-5 (]: Writing runtime sql for node "model.coco_dbt.sales_data"
+[0m07:45:45.061895 [debug] [Thread-4 (]: Writing runtime sql for node "model.coco_dbt.sales_data_sample"
+[0m07:45:45.066316 [debug] [Thread-5 (]: Using snowflake connection "model.coco_dbt.sales_data"
+[0m07:45:45.067504 [debug] [Thread-5 (]: On model.coco_dbt.sales_data: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data"} */
+create or replace   view COCO_DB.BRONZE.sales_data
+  
+   as (
+    
+
+WITH country_codes AS (
+    SELECT column1 AS country, column2 AS country_code FROM (VALUES
+        ('USA', '+1'),
+        ('Canada', '+1'),
+        ('France', '+33'),
+        ('Spain', '+34'),
+        ('Australia', '+61'),
+        ('UK', '+44'),
+        ('Germany', '+49'),
+        ('Italy', '+39'),
+        ('Japan', '+81'),
+        ('Singapore', '+65'),
+        ('Philippines', '+63'),
+        ('Denmark', '+45'),
+        ('Sweden', '+46'),
+        ('Finland', '+358'),
+        ('Norway', '+47'),
+        ('Austria', '+43'),
+        ('Belgium', '+32'),
+        ('Switzerland', '+41'),
+        ('Ireland', '+353'),
+        ('New Zealand', '+64')
+    )
+),
+
+source_data AS (
+    SELECT * FROM COCO_DB.BRONZE.sales_data_sample_csv
+    UNION ALL
+    SELECT * FROM COCO_DB.BRONZE.sales_data_sample_json
+),
+
+cleaned AS (
+    SELECT
+        s.*,
+        cc.country_code,
+        REGEXP_REPLACE(s.phone, '[^0-9]', '') AS phone_digits
+    FROM source_data s
+    LEFT JOIN country_codes cc ON s.country = cc.country
+)
+
+SELECT
+    ordernumber::INTEGER AS ordernumber,
+    quantityordered::INTEGER AS quantityordered,
+    priceeach::DECIMAL(10,2) AS priceeach,
+    orderlinenumber::INTEGER AS orderlinenumber,
+    sales::DECIMAL(12,2) AS sales,
+    TRY_TO_TIMESTAMP(orderdate, 'MM/DD/YYYY HH24:MI') AS orderdate,
+    status::VARCHAR AS status,
+    qtr_id::INTEGER AS qtr_id,
+    month_id::INTEGER AS month_id,
+    year_id::INTEGER AS year_id,
+    productline::VARCHAR AS productline,
+    msrp::INTEGER AS msrp,
+    productcode::VARCHAR AS productcode,
+    customername::VARCHAR AS customername,
+    CASE
+        WHEN LENGTH(phone_digits) >= 10 THEN
+            COALESCE(country_code, '+1') || ' ' ||
+            SUBSTRING(phone_digits, LENGTH(phone_digits) - 9, 3) || '-' ||
+            SUBSTRING(phone_digits, LENGTH(phone_digits) - 6, 3) || '-' ||
+            SUBSTRING(phone_digits, LENGTH(phone_digits) - 3, 4)
+        ELSE phone
+    END::VARCHAR AS phone,
+    addressline1::VARCHAR AS addressline1,
+    addressline2::VARCHAR AS addressline2,
+    city::VARCHAR AS city,
+    state::VARCHAR AS state,
+    postalcode::VARCHAR AS postalcode,
+    country::VARCHAR AS country,
+    territory::VARCHAR AS territory,
+    contactlastname::VARCHAR AS contactlastname,
+    contactfirstname::VARCHAR AS contactfirstname,
+    dealsize::VARCHAR AS dealsize,
+    file_format::VARCHAR AS file_format,
+    loaded_timestamp::TIMESTAMP_NTZ AS loaded_timestamp
+FROM cleaned
+  );
+[0m07:45:45.071691 [debug] [Thread-4 (]: Using snowflake connection "model.coco_dbt.sales_data_sample"
+[0m07:45:45.072353 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m07:45:45.073394 [debug] [Thread-4 (]: On model.coco_dbt.sales_data_sample: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data_sample"} */
+create or replace   view COCO_DB.BRONZE.sales_data_sample
+  
+   as (
+    
+
+SELECT
+    ordernumber::INTEGER AS ordernumber,
+    quantityordered::INTEGER AS quantityordered,
+    priceeach::DECIMAL(10,2) AS priceeach,
+    orderlinenumber::INTEGER AS orderlinenumber,
+    sales::DECIMAL(12,2) AS sales,
+    TRY_TO_TIMESTAMP(orderdate, 'MM/DD/YYYY HH24:MI') AS orderdate,
+    status::VARCHAR AS status,
+    qtr_id::INTEGER AS qtr_id,
+    month_id::INTEGER AS month_id,
+    year_id::INTEGER AS year_id,
+    productline::VARCHAR AS productline,
+    msrp::INTEGER AS msrp,
+    productcode::VARCHAR AS productcode,
+    customername::VARCHAR AS customername,
+    phone::VARCHAR AS phone,
+    addressline1::VARCHAR AS addressline1,
+    addressline2::VARCHAR AS addressline2,
+    city::VARCHAR AS city,
+    state::VARCHAR AS state,
+    postalcode::VARCHAR AS postalcode,
+    country::VARCHAR AS country,
+    territory::VARCHAR AS territory,
+    contactlastname::VARCHAR AS contactlastname,
+    contactfirstname::VARCHAR AS contactfirstname,
+    dealsize::VARCHAR AS dealsize,
+    file_format::VARCHAR AS file_format,
+    loaded_timestamp::TIMESTAMP_NTZ AS loaded_timestamp
+FROM COCO_DB.BRONZE.sales_data_sample_csv
+
+UNION ALL
+
+SELECT
+    ordernumber::INTEGER AS ordernumber,
+    quantityordered::INTEGER AS quantityordered,
+    priceeach::DECIMAL(10,2) AS priceeach,
+    orderlinenumber::INTEGER AS orderlinenumber,
+    sales::DECIMAL(12,2) AS sales,
+    TRY_TO_TIMESTAMP(orderdate, 'MM/DD/YYYY HH24:MI') AS orderdate,
+    status::VARCHAR AS status,
+    qtr_id::INTEGER AS qtr_id,
+    month_id::INTEGER AS month_id,
+    year_id::INTEGER AS year_id,
+    productline::VARCHAR AS productline,
+    msrp::INTEGER AS msrp,
+    productcode::VARCHAR AS productcode,
+    customername::VARCHAR AS customername,
+    phone::VARCHAR AS phone,
+    addressline1::VARCHAR AS addressline1,
+    addressline2::VARCHAR AS addressline2,
+    city::VARCHAR AS city,
+    state::VARCHAR AS state,
+    postalcode::VARCHAR AS postalcode,
+    country::VARCHAR AS country,
+    territory::VARCHAR AS territory,
+    contactlastname::VARCHAR AS contactlastname,
+    contactfirstname::VARCHAR AS contactfirstname,
+    dealsize::VARCHAR AS dealsize,
+    file_format::VARCHAR AS file_format,
+    loaded_timestamp::TIMESTAMP_NTZ AS loaded_timestamp
+FROM COCO_DB.BRONZE.sales_data_sample_json
+  );
+[0m07:45:45.074458 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m07:45:46.315324 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.241 seconds
+[0m07:45:46.316263 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 1.244 seconds
+[0m07:45:46.319935 [info ] [Thread-4 (]: 4 of 4 OK created sql view model BRONZE.sales_data_sample ...................... [[32mSUCCESS 1[0m in 1.35s]
+[0m07:45:46.323052 [info ] [Thread-5 (]: 3 of 4 OK created sql view model BRONZE.sales_data ............................. [[32mSUCCESS 1[0m in 1.35s]
+[0m07:45:46.324010 [debug] [Thread-4 (]: Finished running node model.coco_dbt.sales_data_sample
+[0m07:45:46.324825 [debug] [Thread-5 (]: Finished running node model.coco_dbt.sales_data
+[0m07:45:46.328479 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m07:45:46.329421 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample_json' was properly closed.
+[0m07:45:46.329968 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample_csv' was properly closed.
+[0m07:45:46.330416 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data' was properly closed.
+[0m07:45:46.330846 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample' was properly closed.
+[0m07:45:46.331459 [info ] [Dummy-1   ]: 
+[0m07:45:46.331971 [info ] [Dummy-1   ]: Finished running 2 table models, 2 view models in 0 hours 0 minutes and 3.73 seconds (3.73s).
+[0m07:45:46.333425 [debug] [Dummy-1   ]: Command end result
+[0m07:45:46.363007 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m07:45:46.365362 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m07:45:46.373398 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m07:45:46.373939 [info ] [Dummy-1   ]: 
+[0m07:45:46.374595 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m07:45:46.375092 [info ] [Dummy-1   ]: 
+[0m07:45:46.375616 [info ] [Dummy-1   ]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+[0m07:45:46.377413 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.332374, "process_in_blocks": "0", "process_kernel_time": 0.94, "process_mem_max_rss": "454204", "process_out_blocks": "0", "process_user_time": 5.23}
+[0m07:45:46.378107 [debug] [Dummy-1   ]: Command `cli run` succeeded at 07:45:46.377839 after 5.33 seconds
+[0m07:45:46.378699 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 07:56:39.648480 | ea7f50fa-58f8-4625-9c47-daedd930b0d6 ==============================
+[0m07:56:39.648480 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m07:56:39.649528 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'debug': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'introspect': 'True', 'static_parser': 'True', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m07:56:40.004579 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m07:56:40.553603 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m07:56:40.795519 [debug] [Dummy-1   ]: Partial parsing enabled: 1 files deleted, 0 files added, 0 files changed.
+[0m07:56:40.796323 [debug] [Dummy-1   ]: Partial parsing: deleted file: coco_dbt://models/bronze/sales_data_sample.sql
+[0m07:56:41.129463 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m07:56:41.131804 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m07:56:41.180877 [info ] [Dummy-1   ]: Found 3 models, 1 source, 476 macros
+[0m07:56:41.183055 [info ] [Dummy-1   ]: 
+[0m07:56:41.183605 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m07:56:41.184077 [info ] [Dummy-1   ]: 
+[0m07:56:41.184904 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m07:56:41.191589 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB'
+[0m07:56:41.295738 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB"
+[0m07:56:41.296376 [debug] [ThreadPool]: On list_COCO_DB: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB"} */
+show terse schemas in database COCO_DB
+    limit 10000
+[0m07:56:41.296867 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:56:41.716445 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.419 seconds
+[0m07:56:41.721045 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB_BRONZE'
+[0m07:56:41.737698 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m07:56:41.738301 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m07:56:41.738798 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:56:42.134017 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.395 seconds
+[0m07:56:42.139830 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m07:56:42.140399 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+show objects in COCO_DB.BRONZE
+    limit 10000
+    
+;
+[0m07:56:42.235991 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.095 seconds
+[0m07:56:42.238852 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m07:56:42.239405 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m07:56:42.305603 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.066 seconds
+[0m07:56:42.315193 [debug] [Thread-2 (]: Began running node model.coco_dbt.sales_data_sample_csv
+[0m07:56:42.315857 [debug] [Thread-3 (]: Began running node model.coco_dbt.sales_data_sample_json
+[0m07:56:42.316698 [info ] [Thread-2 (]: 1 of 3 START sql table model BRONZE.sales_data_sample_csv ...................... [RUN]
+[0m07:56:42.317504 [info ] [Thread-3 (]: 2 of 3 START sql table model BRONZE.sales_data_sample_json ..................... [RUN]
+[0m07:56:42.318275 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_COCO_DB_BRONZE, now model.coco_dbt.sales_data_sample_csv)
+[0m07:56:42.318951 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_COCO_DB, now model.coco_dbt.sales_data_sample_json)
+[0m07:56:42.319571 [debug] [Thread-2 (]: Began compiling node model.coco_dbt.sales_data_sample_csv
+[0m07:56:42.320206 [debug] [Thread-3 (]: Began compiling node model.coco_dbt.sales_data_sample_json
+[0m07:56:42.333605 [debug] [Thread-2 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample_csv"
+[0m07:56:42.339878 [debug] [Thread-3 (]: Writing injected SQL for node "model.coco_dbt.sales_data_sample_json"
+[0m07:56:42.341061 [debug] [Thread-2 (]: Began executing node model.coco_dbt.sales_data_sample_csv
+[0m07:56:42.347280 [debug] [Thread-3 (]: Began executing node model.coco_dbt.sales_data_sample_json
+[0m07:56:42.403109 [debug] [Thread-2 (]: Writing runtime sql for node "model.coco_dbt.sales_data_sample_csv"
+[0m07:56:42.409004 [debug] [Thread-3 (]: Writing runtime sql for node "model.coco_dbt.sales_data_sample_json"
+[0m07:56:42.411688 [debug] [Thread-2 (]: Using snowflake connection "model.coco_dbt.sales_data_sample_csv"
+[0m07:56:42.414344 [debug] [Thread-3 (]: Using snowflake connection "model.coco_dbt.sales_data_sample_json"
+[0m07:56:42.415039 [debug] [Thread-2 (]: On model.coco_dbt.sales_data_sample_csv: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data_sample_csv"} */
+create or replace transient table COCO_DB.BRONZE.sales_data_sample_csv
+         as
+        (
+
+SELECT
+    $1::VARCHAR AS ordernumber,
+    $2::VARCHAR AS quantityordered,
+    $3::VARCHAR AS priceeach,
+    $4::VARCHAR AS orderlinenumber,
+    $5::VARCHAR AS sales,
+    $6::VARCHAR AS orderdate,
+    $7::VARCHAR AS status,
+    $8::VARCHAR AS qtr_id,
+    $9::VARCHAR AS month_id,
+    $10::VARCHAR AS year_id,
+    $11::VARCHAR AS productline,
+    $12::VARCHAR AS msrp,
+    $13::VARCHAR AS productcode,
+    $14::VARCHAR AS customername,
+    $15::VARCHAR AS phone,
+    $16::VARCHAR AS addressline1,
+    $17::VARCHAR AS addressline2,
+    $18::VARCHAR AS city,
+    $19::VARCHAR AS state,
+    $20::VARCHAR AS postalcode,
+    $21::VARCHAR AS country,
+    $22::VARCHAR AS territory,
+    $23::VARCHAR AS contactlastname,
+    $24::VARCHAR AS contactfirstname,
+    $25::VARCHAR AS dealsize,
+    'CSV' AS file_format,
+    CURRENT_TIMESTAMP() AS loaded_timestamp
+FROM @SOURCE_DB.PUBLIC.stage_source_data/sales_data_sample.csv.gz
+(FILE_FORMAT => 'coco_db.public.csv_format')
+        );
+[0m07:56:42.415907 [debug] [Thread-3 (]: On model.coco_dbt.sales_data_sample_json: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data_sample_json"} */
+create or replace transient table COCO_DB.BRONZE.sales_data_sample_json
+         as
+        (
+
+SELECT
+    $1:ORDERNUMBER::VARCHAR AS ordernumber,
+    $1:QUANTITYORDERED::VARCHAR AS quantityordered,
+    $1:PRICEEACH::VARCHAR AS priceeach,
+    $1:ORDERLINENUMBER::VARCHAR AS orderlinenumber,
+    $1:SALES::VARCHAR AS sales,
+    $1:ORDERDATE::VARCHAR AS orderdate,
+    $1:STATUS::VARCHAR AS status,
+    $1:QTR_ID::VARCHAR AS qtr_id,
+    $1:MONTH_ID::VARCHAR AS month_id,
+    $1:YEAR_ID::VARCHAR AS year_id,
+    $1:PRODUCTLINE::VARCHAR AS productline,
+    $1:MSRP::VARCHAR AS msrp,
+    $1:PRODUCTCODE::VARCHAR AS productcode,
+    $1:CUSTOMERNAME::VARCHAR AS customername,
+    $1:PHONE::VARCHAR AS phone,
+    $1:ADDRESSLINE1::VARCHAR AS addressline1,
+    $1:ADDRESSLINE2::VARCHAR AS addressline2,
+    $1:CITY::VARCHAR AS city,
+    $1:STATE::VARCHAR AS state,
+    $1:POSTALCODE::VARCHAR AS postalcode,
+    $1:COUNTRY::VARCHAR AS country,
+    $1:TERRITORY::VARCHAR AS territory,
+    $1:CONTACTLASTNAME::VARCHAR AS contactlastname,
+    $1:CONTACTFIRSTNAME::VARCHAR AS contactfirstname,
+    $1:DEALSIZE::VARCHAR AS dealsize,
+    'JSON' AS file_format,
+    CURRENT_TIMESTAMP() AS loaded_timestamp
+FROM @SOURCE_DB.PUBLIC.stage_source_data/sales_data_sample.json.gz
+(FILE_FORMAT => 'coco_db.public.json_format')
+        );
+[0m07:56:42.416596 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m07:56:42.417202 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m07:56:44.018976 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.602 seconds
+[0m07:56:44.052148 [info ] [Thread-3 (]: 2 of 3 OK created sql table model BRONZE.sales_data_sample_json ................ [[32mSUCCESS 1[0m in 1.73s]
+[0m07:56:44.053141 [debug] [Thread-3 (]: Finished running node model.coco_dbt.sales_data_sample_json
+[0m07:56:44.215599 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.799 seconds
+[0m07:56:44.218949 [info ] [Thread-2 (]: 1 of 3 OK created sql table model BRONZE.sales_data_sample_csv ................. [[32mSUCCESS 1[0m in 1.90s]
+[0m07:56:44.219858 [debug] [Thread-2 (]: Finished running node model.coco_dbt.sales_data_sample_csv
+[0m07:56:44.221288 [debug] [Thread-5 (]: Began running node model.coco_dbt.sales_data
+[0m07:56:44.222364 [info ] [Thread-5 (]: 3 of 3 START sql view model BRONZE.sales_data .................................. [RUN]
+[0m07:56:44.223236 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.coco_dbt.sales_data'
+[0m07:56:44.223816 [debug] [Thread-5 (]: Began compiling node model.coco_dbt.sales_data
+[0m07:56:44.230705 [debug] [Thread-5 (]: Writing injected SQL for node "model.coco_dbt.sales_data"
+[0m07:56:44.231543 [debug] [Thread-5 (]: Began executing node model.coco_dbt.sales_data
+[0m07:56:44.275926 [debug] [Thread-5 (]: Writing runtime sql for node "model.coco_dbt.sales_data"
+[0m07:56:44.280121 [debug] [Thread-5 (]: Using snowflake connection "model.coco_dbt.sales_data"
+[0m07:56:44.281093 [debug] [Thread-5 (]: On model.coco_dbt.sales_data: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.sales_data"} */
+create or replace   view COCO_DB.BRONZE.sales_data
+  
+   as (
+    
+
+WITH country_codes AS (
+    SELECT column1 AS country, column2 AS country_code FROM (VALUES
+        ('USA', '+1'),
+        ('Canada', '+1'),
+        ('France', '+33'),
+        ('Spain', '+34'),
+        ('Australia', '+61'),
+        ('UK', '+44'),
+        ('Germany', '+49'),
+        ('Italy', '+39'),
+        ('Japan', '+81'),
+        ('Singapore', '+65'),
+        ('Philippines', '+63'),
+        ('Denmark', '+45'),
+        ('Sweden', '+46'),
+        ('Finland', '+358'),
+        ('Norway', '+47'),
+        ('Austria', '+43'),
+        ('Belgium', '+32'),
+        ('Switzerland', '+41'),
+        ('Ireland', '+353'),
+        ('New Zealand', '+64')
+    )
+),
+
+source_data AS (
+    SELECT * FROM COCO_DB.BRONZE.sales_data_sample_csv
+    UNION ALL
+    SELECT * FROM COCO_DB.BRONZE.sales_data_sample_json
+),
+
+cleaned AS (
+    SELECT
+        s.*,
+        cc.country_code,
+        REGEXP_REPLACE(s.phone, '[^0-9]', '') AS phone_digits
+    FROM source_data s
+    LEFT JOIN country_codes cc ON s.country = cc.country
+)
+
+SELECT
+    ordernumber::INTEGER AS ordernumber,
+    quantityordered::INTEGER AS quantityordered,
+    priceeach::DECIMAL(10,2) AS priceeach,
+    orderlinenumber::INTEGER AS orderlinenumber,
+    sales::DECIMAL(12,2) AS sales,
+    TRY_TO_TIMESTAMP(orderdate, 'MM/DD/YYYY HH24:MI') AS orderdate,
+    status::VARCHAR AS status,
+    qtr_id::INTEGER AS qtr_id,
+    month_id::INTEGER AS month_id,
+    year_id::INTEGER AS year_id,
+    productline::VARCHAR AS productline,
+    msrp::INTEGER AS msrp,
+    productcode::VARCHAR AS productcode,
+    customername::VARCHAR AS customername,
+    CASE
+        WHEN LENGTH(phone_digits) >= 10 THEN
+            COALESCE(country_code, '+1') || ' ' ||
+            SUBSTRING(phone_digits, LENGTH(phone_digits) - 9, 3) || '-' ||
+            SUBSTRING(phone_digits, LENGTH(phone_digits) - 6, 3) || '-' ||
+            SUBSTRING(phone_digits, LENGTH(phone_digits) - 3, 4)
+        ELSE phone
+    END::VARCHAR AS phone,
+    addressline1::VARCHAR AS addressline1,
+    addressline2::VARCHAR AS addressline2,
+    city::VARCHAR AS city,
+    state::VARCHAR AS state,
+    postalcode::VARCHAR AS postalcode,
+    country::VARCHAR AS country,
+    territory::VARCHAR AS territory,
+    contactlastname::VARCHAR AS contactlastname,
+    contactfirstname::VARCHAR AS contactfirstname,
+    dealsize::VARCHAR AS dealsize,
+    file_format::VARCHAR AS file_format,
+    loaded_timestamp::TIMESTAMP_NTZ AS loaded_timestamp
+FROM cleaned
+  );
+[0m07:56:44.281886 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m07:56:45.125514 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.843 seconds
+[0m07:56:45.129135 [info ] [Thread-5 (]: 3 of 3 OK created sql view model BRONZE.sales_data ............................. [[32mSUCCESS 1[0m in 0.91s]
+[0m07:56:45.130071 [debug] [Thread-5 (]: Finished running node model.coco_dbt.sales_data
+[0m07:56:45.133086 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m07:56:45.133912 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample_json' was properly closed.
+[0m07:56:45.134404 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data_sample_csv' was properly closed.
+[0m07:56:45.134848 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.sales_data' was properly closed.
+[0m07:56:45.135433 [info ] [Dummy-1   ]: 
+[0m07:56:45.135951 [info ] [Dummy-1   ]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 3.95 seconds (3.95s).
+[0m07:56:45.137231 [debug] [Dummy-1   ]: Command end result
+[0m07:56:45.165483 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m07:56:45.167623 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m07:56:45.175460 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m07:56:45.175972 [info ] [Dummy-1   ]: 
+[0m07:56:45.176622 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m07:56:45.177146 [info ] [Dummy-1   ]: 
+[0m07:56:45.177689 [info ] [Dummy-1   ]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m07:56:45.179441 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.6264234, "process_in_blocks": "0", "process_kernel_time": 1.03, "process_mem_max_rss": "451868", "process_out_blocks": "0", "process_user_time": 5.16}
+[0m07:56:45.180114 [debug] [Dummy-1   ]: Command `cli run` succeeded at 07:56:45.179846 after 5.63 seconds
+[0m07:56:45.180656 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 10:47:26.386944 | 24a922d1-6a1c-42b0-adc4-f73facf330ef ==============================
+[0m10:47:26.386944 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m10:47:26.387980 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'profiles_dir': '/tmp/dbt/', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt ', 'introspect': 'True', 'target_path': '/tmp/dbt/target/', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m10:47:26.741987 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m10:47:27.293179 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m10:47:27.533537 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m10:47:27.534465 [debug] [Dummy-1   ]: Partial parsing: added file: coco_dbt://models/bronze/schema.yml
+[0m10:47:28.194526 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m10:47:28.196738 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m10:47:28.262121 [info ] [Dummy-1   ]: Found 3 models, 3 data tests, 1 source, 476 macros
+[0m10:47:28.264325 [info ] [Dummy-1   ]: 
+[0m10:47:28.264904 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m10:47:28.265377 [info ] [Dummy-1   ]: 
+[0m10:47:28.266146 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m10:47:28.273011 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB_BRONZE'
+[0m10:47:28.379258 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m10:47:28.379839 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m10:47:28.380343 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:47:28.615308 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.235 seconds
+[0m10:47:28.620806 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m10:47:28.621359 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+show objects in COCO_DB.BRONZE
+    limit 10000
+    
+;
+[0m10:47:28.681677 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.060 seconds
+[0m10:47:28.684158 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m10:47:28.684725 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m10:47:28.725187 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.040 seconds
+[0m10:47:28.735404 [debug] [Thread-2 (]: Began running node test.coco_dbt.not_null_sales_data_orderlinenumber.fe5bf78f31
+[0m10:47:28.736080 [debug] [Thread-3 (]: Began running node test.coco_dbt.not_null_sales_data_ordernumber.75d4951c15
+[0m10:47:28.737095 [debug] [Thread-4 (]: Began running node test.coco_dbt.unique_sales_data_ordernumber_orderlinenumber.7c9df2021c
+[0m10:47:28.737826 [info ] [Thread-2 (]: 1 of 3 START test not_null_sales_data_orderlinenumber .......................... [RUN]
+[0m10:47:28.738512 [info ] [Thread-3 (]: 2 of 3 START test not_null_sales_data_ordernumber .............................. [RUN]
+[0m10:47:28.739173 [info ] [Thread-4 (]: 3 of 3 START test unique_sales_data_ordernumber_orderlinenumber ................ [RUN]
+[0m10:47:28.739898 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_COCO_DB_BRONZE, now test.coco_dbt.not_null_sales_data_orderlinenumber.fe5bf78f31)
+[0m10:47:28.740715 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.coco_dbt.not_null_sales_data_ordernumber.75d4951c15'
+[0m10:47:28.741462 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.coco_dbt.unique_sales_data_ordernumber_orderlinenumber.7c9df2021c'
+[0m10:47:28.742077 [debug] [Thread-2 (]: Began compiling node test.coco_dbt.not_null_sales_data_orderlinenumber.fe5bf78f31
+[0m10:47:28.742637 [debug] [Thread-3 (]: Began compiling node test.coco_dbt.not_null_sales_data_ordernumber.75d4951c15
+[0m10:47:28.743202 [debug] [Thread-4 (]: Began compiling node test.coco_dbt.unique_sales_data_ordernumber_orderlinenumber.7c9df2021c
+[0m10:47:28.766009 [debug] [Thread-2 (]: Writing injected SQL for node "test.coco_dbt.not_null_sales_data_orderlinenumber.fe5bf78f31"
+[0m10:47:28.772774 [debug] [Thread-3 (]: Writing injected SQL for node "test.coco_dbt.not_null_sales_data_ordernumber.75d4951c15"
+[0m10:47:28.782476 [debug] [Thread-4 (]: Writing injected SQL for node "test.coco_dbt.unique_sales_data_ordernumber_orderlinenumber.7c9df2021c"
+[0m10:47:28.783813 [debug] [Thread-2 (]: Began executing node test.coco_dbt.not_null_sales_data_orderlinenumber.fe5bf78f31
+[0m10:47:28.784763 [debug] [Thread-3 (]: Began executing node test.coco_dbt.not_null_sales_data_ordernumber.75d4951c15
+[0m10:47:28.801553 [debug] [Thread-4 (]: Began executing node test.coco_dbt.unique_sales_data_ordernumber_orderlinenumber.7c9df2021c
+[0m10:47:28.815172 [debug] [Thread-2 (]: Writing runtime sql for node "test.coco_dbt.not_null_sales_data_orderlinenumber.fe5bf78f31"
+[0m10:47:28.819686 [debug] [Thread-3 (]: Writing runtime sql for node "test.coco_dbt.not_null_sales_data_ordernumber.75d4951c15"
+[0m10:47:28.824283 [debug] [Thread-4 (]: Writing runtime sql for node "test.coco_dbt.unique_sales_data_ordernumber_orderlinenumber.7c9df2021c"
+[0m10:47:28.826133 [debug] [Thread-2 (]: Using snowflake connection "test.coco_dbt.not_null_sales_data_orderlinenumber.fe5bf78f31"
+[0m10:47:28.827255 [debug] [Thread-3 (]: Using snowflake connection "test.coco_dbt.not_null_sales_data_ordernumber.75d4951c15"
+[0m10:47:28.828123 [debug] [Thread-2 (]: On test.coco_dbt.not_null_sales_data_orderlinenumber.fe5bf78f31: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "test.coco_dbt.not_null_sales_data_orderlinenumber.fe5bf78f31"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select orderlinenumber
+from COCO_DB.BRONZE.sales_data
+where orderlinenumber is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:47:28.829488 [debug] [Thread-4 (]: Using snowflake connection "test.coco_dbt.unique_sales_data_ordernumber_orderlinenumber.7c9df2021c"
+[0m10:47:28.830113 [debug] [Thread-3 (]: On test.coco_dbt.not_null_sales_data_ordernumber.75d4951c15: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "test.coco_dbt.not_null_sales_data_ordernumber.75d4951c15"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ordernumber
+from COCO_DB.BRONZE.sales_data
+where ordernumber is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:47:28.830734 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:47:28.831393 [debug] [Thread-4 (]: On test.coco_dbt.unique_sales_data_ordernumber_orderlinenumber.7c9df2021c: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "test.coco_dbt.unique_sales_data_ordernumber_orderlinenumber.7c9df2021c"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    ordernumber || '-' || orderlinenumber as unique_field,
+    count(*) as n_records
+
+from COCO_DB.BRONZE.sales_data
+where ordernumber || '-' || orderlinenumber is not null
+group by ordernumber || '-' || orderlinenumber
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m10:47:28.831995 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:47:28.832755 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:47:29.239759 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.409 seconds
+[0m10:47:29.250193 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.418 seconds
+[0m10:47:29.252585 [info ] [Thread-2 (]: 1 of 3 PASS not_null_sales_data_orderlinenumber ................................ [[32mPASS[0m in 0.51s]
+[0m10:47:29.255137 [info ] [Thread-3 (]: 2 of 3 PASS not_null_sales_data_ordernumber .................................... [[32mPASS[0m in 0.51s]
+[0m10:47:29.256116 [debug] [Thread-2 (]: Finished running node test.coco_dbt.not_null_sales_data_orderlinenumber.fe5bf78f31
+[0m10:47:29.256989 [debug] [Thread-3 (]: Finished running node test.coco_dbt.not_null_sales_data_ordernumber.75d4951c15
+[0m10:47:29.449978 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.617 seconds
+[0m10:47:29.452891 [info ] [Thread-4 (]: 3 of 3 PASS unique_sales_data_ordernumber_orderlinenumber ...................... [[32mPASS[0m in 0.71s]
+[0m10:47:29.453842 [debug] [Thread-4 (]: Finished running node test.coco_dbt.unique_sales_data_ordernumber_orderlinenumber.7c9df2021c
+[0m10:47:29.457534 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m10:47:29.458114 [debug] [Dummy-1   ]: Connection 'test.coco_dbt.not_null_sales_data_orderlinenumber.fe5bf78f31' was properly closed.
+[0m10:47:29.458621 [debug] [Dummy-1   ]: Connection 'test.coco_dbt.not_null_sales_data_ordernumber.75d4951c15' was properly closed.
+[0m10:47:29.459101 [debug] [Dummy-1   ]: Connection 'test.coco_dbt.unique_sales_data_ordernumber_orderlinenumber.7c9df2021c' was properly closed.
+[0m10:47:29.459631 [info ] [Dummy-1   ]: 
+[0m10:47:29.460145 [info ] [Dummy-1   ]: Finished running 3 data tests in 0 hours 0 minutes and 1.19 seconds (1.19s).
+[0m10:47:29.461473 [debug] [Dummy-1   ]: Command end result
+[0m10:47:29.493010 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m10:47:29.495141 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m10:47:29.503639 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m10:47:29.504152 [info ] [Dummy-1   ]: 
+[0m10:47:29.504815 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m10:47:29.505318 [info ] [Dummy-1   ]: 
+[0m10:47:29.505845 [info ] [Dummy-1   ]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m10:47:29.507624 [debug] [Dummy-1   ]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 3.215522, "process_in_blocks": "0", "process_kernel_time": 0.91, "process_mem_max_rss": "453684", "process_out_blocks": "0", "process_user_time": 5.23}
+[0m10:47:29.508299 [debug] [Dummy-1   ]: Command `cli test` succeeded at 10:47:29.508029 after 3.22 seconds
+[0m10:47:29.508908 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 10:49:07.059785 | 7f3b3c83-0ab2-4aab-9b09-e4b20da3d9ed ==============================
+[0m10:49:07.059785 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m10:49:07.060803 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'version_check': 'True', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': '/tmp/dbt/target/', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'False'}
+[0m10:49:07.415645 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m10:49:07.965635 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m10:49:08.231009 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 5 files added, 0 files changed.
+[0m10:49:08.231876 [debug] [Dummy-1   ]: Partial parsing: added file: coco_dbt://models/silver/dim_date.sql
+[0m10:49:08.232463 [debug] [Dummy-1   ]: Partial parsing: added file: coco_dbt://models/silver/dim_product.sql
+[0m10:49:08.233048 [debug] [Dummy-1   ]: Partial parsing: added file: coco_dbt://models/silver/dim_customer.sql
+[0m10:49:08.233622 [debug] [Dummy-1   ]: Partial parsing: added file: coco_dbt://models/silver/dim_order_status.sql
+[0m10:49:08.234209 [debug] [Dummy-1   ]: Partial parsing: added file: coco_dbt://models/silver/fact_sales.sql
+[0m10:49:08.914566 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m10:49:08.917004 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m10:49:08.964620 [info ] [Dummy-1   ]: Found 8 models, 3 data tests, 1 source, 476 macros
+[0m10:49:08.967042 [info ] [Dummy-1   ]: 
+[0m10:49:08.967590 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m10:49:08.968048 [info ] [Dummy-1   ]: 
+[0m10:49:08.968900 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m10:49:08.975900 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB'
+[0m10:49:09.075958 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB"
+[0m10:49:09.076525 [debug] [ThreadPool]: On list_COCO_DB: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB"} */
+show terse schemas in database COCO_DB
+    limit 10000
+[0m10:49:09.077029 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:49:09.350040 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.273 seconds
+[0m10:49:09.354703 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_COCO_DB_SILVER'
+[0m10:49:09.355839 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_COCO_DB, now list_COCO_DB_BRONZE)
+[0m10:49:09.372251 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_SILVER"
+[0m10:49:09.376608 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m10:49:09.377216 [debug] [ThreadPool]: On list_COCO_DB_SILVER: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_SILVER"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m10:49:09.377756 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m10:49:09.378301 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:49:09.378902 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:49:09.741546 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.363 seconds
+[0m10:49:09.747799 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.369 seconds
+[0m10:49:09.747089 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_SILVER"
+[0m10:49:09.750062 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m10:49:09.750688 [debug] [ThreadPool]: On list_COCO_DB_SILVER: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_SILVER"} */
+show objects in COCO_DB.SILVER
+    limit 10000
+    
+;
+[0m10:49:09.751234 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+show objects in COCO_DB.BRONZE
+    limit 10000
+    
+;
+[0m10:49:09.807973 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.056 seconds
+[0m10:49:09.809313 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.057 seconds
+[0m10:49:09.811669 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_BRONZE"
+[0m10:49:09.813817 [debug] [ThreadPool]: Using snowflake connection "list_COCO_DB_SILVER"
+[0m10:49:09.814428 [debug] [ThreadPool]: On list_COCO_DB_BRONZE: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_BRONZE"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m10:49:09.814987 [debug] [ThreadPool]: On list_COCO_DB_SILVER: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "connection_name": "list_COCO_DB_SILVER"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m10:49:09.863933 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.048 seconds
+[0m10:49:09.864657 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.049 seconds
+[0m10:49:09.877261 [debug] [Thread-2 (]: Began running node model.coco_dbt.dim_customer
+[0m10:49:09.877944 [debug] [Thread-3 (]: Began running node model.coco_dbt.dim_date
+[0m10:49:09.878686 [debug] [Thread-4 (]: Began running node model.coco_dbt.dim_order_status
+[0m10:49:09.879351 [debug] [Thread-5 (]: Began running node model.coco_dbt.dim_product
+[0m10:49:09.880127 [info ] [Thread-2 (]: 1 of 5 START sql table model SILVER.dim_customer ............................... [RUN]
+[0m10:49:09.880889 [info ] [Thread-3 (]: 2 of 5 START sql table model SILVER.dim_date ................................... [RUN]
+[0m10:49:09.881631 [info ] [Thread-4 (]: 3 of 5 START sql table model SILVER.dim_order_status ........................... [RUN]
+[0m10:49:09.882394 [info ] [Thread-5 (]: 4 of 5 START sql table model SILVER.dim_product ................................ [RUN]
+[0m10:49:09.883126 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_COCO_DB_SILVER, now model.coco_dbt.dim_customer)
+[0m10:49:09.883771 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_COCO_DB_BRONZE, now model.coco_dbt.dim_date)
+[0m10:49:09.884639 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.coco_dbt.dim_order_status'
+[0m10:49:09.885367 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.coco_dbt.dim_product'
+[0m10:49:09.885971 [debug] [Thread-2 (]: Began compiling node model.coco_dbt.dim_customer
+[0m10:49:09.886552 [debug] [Thread-3 (]: Began compiling node model.coco_dbt.dim_date
+[0m10:49:09.887141 [debug] [Thread-4 (]: Began compiling node model.coco_dbt.dim_order_status
+[0m10:49:09.887692 [debug] [Thread-5 (]: Began compiling node model.coco_dbt.dim_product
+[0m10:49:09.901310 [debug] [Thread-2 (]: Writing injected SQL for node "model.coco_dbt.dim_customer"
+[0m10:49:09.906817 [debug] [Thread-3 (]: Writing injected SQL for node "model.coco_dbt.dim_date"
+[0m10:49:09.912490 [debug] [Thread-4 (]: Writing injected SQL for node "model.coco_dbt.dim_order_status"
+[0m10:49:09.919285 [debug] [Thread-2 (]: Began executing node model.coco_dbt.dim_customer
+[0m10:49:09.917877 [debug] [Thread-5 (]: Writing injected SQL for node "model.coco_dbt.dim_product"
+[0m10:49:09.920022 [debug] [Thread-3 (]: Began executing node model.coco_dbt.dim_date
+[0m10:49:09.937929 [debug] [Thread-4 (]: Began executing node model.coco_dbt.dim_order_status
+[0m10:49:09.966241 [debug] [Thread-2 (]: Writing runtime sql for node "model.coco_dbt.dim_customer"
+[0m10:49:09.971098 [debug] [Thread-3 (]: Writing runtime sql for node "model.coco_dbt.dim_date"
+[0m10:49:09.971691 [debug] [Thread-5 (]: Began executing node model.coco_dbt.dim_product
+[0m10:49:09.976416 [debug] [Thread-4 (]: Writing runtime sql for node "model.coco_dbt.dim_order_status"
+[0m10:49:09.978409 [debug] [Thread-2 (]: Using snowflake connection "model.coco_dbt.dim_customer"
+[0m10:49:09.979630 [debug] [Thread-3 (]: Using snowflake connection "model.coco_dbt.dim_date"
+[0m10:49:09.984112 [debug] [Thread-5 (]: Writing runtime sql for node "model.coco_dbt.dim_product"
+[0m10:49:09.985051 [debug] [Thread-2 (]: On model.coco_dbt.dim_customer: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.dim_customer"} */
+create or replace transient table COCO_DB.SILVER.dim_customer
+         as
+        (
+
+SELECT DISTINCT
+    SHA2(customername || COALESCE(phone, '') || COALESCE(city, '') || COALESCE(country, ''), 256) AS customer_sk,
+    customername,
+    phone,
+    addressline1,
+    addressline2,
+    city,
+    state,
+    postalcode,
+    country,
+    territory,
+    contactlastname,
+    contactfirstname
+FROM COCO_DB.BRONZE.sales_data
+        );
+[0m10:49:09.986146 [debug] [Thread-4 (]: Using snowflake connection "model.coco_dbt.dim_order_status"
+[0m10:49:09.986775 [debug] [Thread-3 (]: On model.coco_dbt.dim_date: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.dim_date"} */
+create or replace transient table COCO_DB.SILVER.dim_date
+         as
+        (
+
+SELECT DISTINCT
+    SHA2(CAST(orderdate AS VARCHAR), 256) AS date_sk,
+    orderdate,
+    qtr_id,
+    month_id,
+    year_id
+FROM COCO_DB.BRONZE.sales_data
+WHERE orderdate IS NOT NULL
+        );
+[0m10:49:09.987683 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:49:09.988778 [debug] [Thread-5 (]: Using snowflake connection "model.coco_dbt.dim_product"
+[0m10:49:09.989379 [debug] [Thread-4 (]: On model.coco_dbt.dim_order_status: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.dim_order_status"} */
+create or replace transient table COCO_DB.SILVER.dim_order_status
+         as
+        (
+
+SELECT DISTINCT
+    SHA2(status || dealsize, 256) AS order_status_sk,
+    status,
+    dealsize
+FROM COCO_DB.BRONZE.sales_data
+        );
+[0m10:49:09.989956 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:49:09.990743 [debug] [Thread-5 (]: On model.coco_dbt.dim_product: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.dim_product"} */
+create or replace transient table COCO_DB.SILVER.dim_product
+         as
+        (
+
+SELECT DISTINCT
+    SHA2(productcode, 256) AS product_sk,
+    productcode,
+    productline,
+    msrp
+FROM COCO_DB.BRONZE.sales_data
+        );
+[0m10:49:09.991350 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:49:09.992166 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m10:49:11.008255 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.018 seconds
+[0m10:49:11.039495 [info ] [Thread-3 (]: 2 of 5 OK created sql table model SILVER.dim_date .............................. [[32mSUCCESS 1[0m in 1.15s]
+[0m10:49:11.040563 [debug] [Thread-3 (]: Finished running node model.coco_dbt.dim_date
+[0m10:49:11.041422 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 1.049 seconds
+[0m10:49:11.042189 [debug] [Thread-3 (]: Began running node model.coco_dbt.fact_sales
+[0m10:49:11.045128 [info ] [Thread-5 (]: 4 of 5 OK created sql table model SILVER.dim_product ........................... [[32mSUCCESS 1[0m in 1.16s]
+[0m10:49:11.045948 [info ] [Thread-3 (]: 5 of 5 START sql table model SILVER.fact_sales ................................. [RUN]
+[0m10:49:11.046829 [debug] [Thread-5 (]: Finished running node model.coco_dbt.dim_product
+[0m10:49:11.047541 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.coco_dbt.dim_date, now model.coco_dbt.fact_sales)
+[0m10:49:11.048553 [debug] [Thread-3 (]: Began compiling node model.coco_dbt.fact_sales
+[0m10:49:11.056368 [debug] [Thread-3 (]: Writing injected SQL for node "model.coco_dbt.fact_sales"
+[0m10:49:11.057183 [debug] [Thread-3 (]: Began executing node model.coco_dbt.fact_sales
+[0m10:49:11.062147 [debug] [Thread-3 (]: Writing runtime sql for node "model.coco_dbt.fact_sales"
+[0m10:49:11.063892 [debug] [Thread-3 (]: Using snowflake connection "model.coco_dbt.fact_sales"
+[0m10:49:11.064552 [debug] [Thread-3 (]: On model.coco_dbt.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "coco_dbt", "target_name": "dev", "node_id": "model.coco_dbt.fact_sales"} */
+create or replace transient table COCO_DB.SILVER.fact_sales
+         as
+        (
+
+SELECT
+    SHA2(CAST(ordernumber AS VARCHAR) || '-' || CAST(orderlinenumber AS VARCHAR), 256) AS sales_sk,
+    ordernumber,
+    orderlinenumber,
+    SHA2(productcode, 256) AS product_sk,
+    SHA2(customername || COALESCE(phone, '') || COALESCE(city, '') || COALESCE(country, ''), 256) AS customer_sk,
+    SHA2(CAST(orderdate AS VARCHAR), 256) AS date_sk,
+    SHA2(status || dealsize, 256) AS order_status_sk,
+    quantityordered,
+    priceeach,
+    sales
+FROM COCO_DB.BRONZE.sales_data
+        );
+[0m10:49:11.065130 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:49:11.071733 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.080 seconds
+[0m10:49:11.074396 [info ] [Thread-4 (]: 3 of 5 OK created sql table model SILVER.dim_order_status ...................... [[32mSUCCESS 1[0m in 1.19s]
+[0m10:49:11.075247 [debug] [Thread-4 (]: Finished running node model.coco_dbt.dim_order_status
+[0m10:49:11.097570 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.110 seconds
+[0m10:49:11.103310 [info ] [Thread-2 (]: 1 of 5 OK created sql table model SILVER.dim_customer .......................... [[32mSUCCESS 1[0m in 1.22s]
+[0m10:49:11.104166 [debug] [Thread-2 (]: Finished running node model.coco_dbt.dim_customer
+[0m10:49:11.777798 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.712 seconds
+[0m10:49:11.781076 [info ] [Thread-3 (]: 5 of 5 OK created sql table model SILVER.fact_sales ............................ [[32mSUCCESS 1[0m in 0.73s]
+[0m10:49:11.781950 [debug] [Thread-3 (]: Finished running node model.coco_dbt.fact_sales
+[0m10:49:11.785503 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m10:49:11.786235 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.fact_sales' was properly closed.
+[0m10:49:11.786740 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.dim_customer' was properly closed.
+[0m10:49:11.787173 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.dim_order_status' was properly closed.
+[0m10:49:11.787600 [debug] [Dummy-1   ]: Connection 'model.coco_dbt.dim_product' was properly closed.
+[0m10:49:11.788173 [info ] [Dummy-1   ]: 
+[0m10:49:11.788774 [info ] [Dummy-1   ]: Finished running 5 table models in 0 hours 0 minutes and 2.82 seconds (2.82s).
+[0m10:49:11.790423 [debug] [Dummy-1   ]: Command end result
+[0m10:49:11.822296 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m10:49:11.824323 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m10:49:11.832060 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m10:49:11.832545 [info ] [Dummy-1   ]: 
+[0m10:49:11.833188 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m10:49:11.833663 [info ] [Dummy-1   ]: 
+[0m10:49:11.834195 [info ] [Dummy-1   ]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m10:49:11.835919 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.8715596, "process_in_blocks": "0", "process_kernel_time": 1.0, "process_mem_max_rss": "501168", "process_out_blocks": "0", "process_user_time": 5.41}
+[0m10:49:11.836577 [debug] [Dummy-1   ]: Command `cli run` succeeded at 10:49:11.836314 after 4.87 seconds
+[0m10:49:11.837097 [debug] [Dummy-1   ]: Flushing usage events

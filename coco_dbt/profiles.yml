@@ -1,0 +1,13 @@
+coco_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: yh31686
+      user: ERAD929
+      authenticator: externalbrowser
+      role: ETL_USER
+      database: COCO_DB
+      warehouse: VW_COCO
+      schema: PUBLIC
+      threads: 4

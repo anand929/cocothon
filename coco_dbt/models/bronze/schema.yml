@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: sales_data
+    description: "Unified sales data with type casting and phone formatting"
+    tests:
+      - unique:
+          column_name: "ordernumber || '-' || orderlinenumber"
+    columns:
+      - name: ordernumber
+        description: "Order number"
+        tests:
+          - not_null
+      - name: orderlinenumber
+        description: "Line number within the order"
+        tests:
+          - not_null

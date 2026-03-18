@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: source_db
+    database: SOURCE_DB
+    schema: PUBLIC
+    tables:
+      - name: stage_source_data
+        description: "Internal stage containing raw sales data files"
+        meta:
+          stage_path: "@source_db.public.stage_source_data"
+        external:
+          location: "@source_db.public.stage_source_data"
+          file_format: "coco_db.public.csv_format"
