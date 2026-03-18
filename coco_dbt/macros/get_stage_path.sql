@@ -1,0 +1,1 @@
+{%- macro get_stage_path(source_name, table_name) -%}@{{ source(source_name, table_name) }}{%- endmacro -%}
