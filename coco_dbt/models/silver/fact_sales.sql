@@ -17,4 +17,4 @@ SELECT
     quantityordered,
     priceeach,
     sales
-FROM {{ ref('sales_data') }}
+FROM {{ ref('v_sales_data') }}

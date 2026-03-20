@@ -6,5 +6,5 @@ SELECT DISTINCT
     qtr_id,
     month_id,
     year_id
-FROM COCO_DB.BRONZE.sales_data
+FROM COCO_DB.BRONZE.v_sales_data
 WHERE orderdate IS NOT NULL

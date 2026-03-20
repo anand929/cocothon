@@ -13,4 +13,4 @@ SELECT DISTINCT
     territory,
     contactlastname,
     contactfirstname
-FROM COCO_DB.BRONZE.sales_data
+FROM COCO_DB.BRONZE.v_sales_data
