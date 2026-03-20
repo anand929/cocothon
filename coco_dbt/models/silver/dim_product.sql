@@ -11,4 +11,4 @@ SELECT DISTINCT
     productcode,
     productline,
     msrp
-FROM {{ ref('sales_data') }}
+FROM {{ ref('v_sales_data') }}

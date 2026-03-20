@@ -12,5 +12,5 @@ SELECT DISTINCT
     qtr_id,
     month_id,
     year_id
-FROM {{ ref('sales_data') }}
+FROM {{ ref('v_sales_data') }}
 WHERE orderdate IS NOT NULL
