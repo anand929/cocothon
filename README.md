@@ -99,6 +99,8 @@ Data is categorized into Dimension and Fact attributes.
 ### Gold Layer
 Creation of Semantic Views corresponding to each Silver layer table for streamlined reporting.
 
+## COCO_DBT DAG
+![COCO_DBT_DAG](COCO_DBT_DAG.png)
 ### Validation & Execution
 To deploy and validate the pipeline, use the following commands:
 
