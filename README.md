@@ -12,7 +12,14 @@ Cleaned and transformed data with appropriate data types and surrogate keys.
 Semantic views optimized for end-user consumption and reporting.
 
 ### Prerequisites & Environment Setup
-1. #### Snowflake Infrastructure
+1. #### Data load setup
+    In order to start with the AI powered pipelines. Load below files manually (either snowsight UI/ snowflake CLI) from local file system to internal stage into `SOURCE_DB.PUBLIC.STAGE_SOURCE_DATA`.
+    - [Data\sales_data_sample.csv](Data\sales_data_sample.csv)
+    - [Data\sales_data_sample.json](Data\sales_data_sample.json)
+    
+    **Note**: This is a data downloaded from [Kaggle](https://www.kaggle.com) and locally refactored for this use case.
+    
+2. #### Snowflake Infrastructure
     Before running the dbt project, ensure the following objects are initialized in Snowflake:
 
     Database: `COCO_DB`.
@@ -21,19 +28,15 @@ Semantic views optimized for end-user consumption and reporting.
 
     Schemas: BRONZE, SILVER, and GOLD under COCO_DB.
 
-    Internal Stage: Source data must be **manually loaded** into `SOURCE_DB.PUBLIC.STAGE_SOURCE_DATA`.
-
-2. #### RBAC (Role-Based Access Control)
+    Internal Stage: Source data must be **manually loaded** into `SOURCE_DB.PUBLIC.STAGE_SOURCE_DATA`. Refer [Data setup](#Data setup) for data loading steps.
+3. #### RBAC (Role-Based Access Control)
     The project uses a dedicated role, `ETL_USER`, with the following privileges:
 
-    USAGE on SOURCE_DB and COCO_DB (all current/future schemas).
-
-    USAGE on VW_COCO warehouse.
-
-    READ access to file formats in SOURCE_DB.
-
-    Full DML/DDL permissions (SELECT, CREATE, DELETE, MODIFY, UPDATE) on tables and views in COCO_DB.
-
+    `USAGE` on `VW_COCO` warehouse, `SOURCE_DB` and `COCO_DB` (all current/future schemas).
+    
+    `READ` access to file formats in `SOURCE_DB`.
+    
+    Full DML/DDL permissions (`SELECT, CREATE, DELETE, MODIFY, UPDATE`) on tables and views in COCO_DB.
 ## Development Standards
 ### Query Standards
 
@@ -101,6 +104,7 @@ Creation of Semantic Views corresponding to each Silver layer table for streamli
 
 ## COCO_DBT DAG
 ![COCO_DBT_DAG](COCO_DBT_DAG.png)
+
 ### Validation & Execution
 To deploy and validate the pipeline, use the following commands:
 
