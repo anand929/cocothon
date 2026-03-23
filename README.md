@@ -14,8 +14,8 @@ Semantic views optimized for end-user consumption and reporting.
 ### Prerequisites & Environment Setup
 1. #### Data load setup
     In order to start with the AI powered pipelines. Load below files manually (either snowsight UI/ snowflake CLI) from local file system to internal stage into `SOURCE_DB.PUBLIC.STAGE_SOURCE_DATA`.
-    - [Data\sales_data_sample.csv](Data\sales_data_sample.csv)
-    - [Data\sales_data_sample.json](Data\sales_data_sample.json)
+    - [sales_data_sample.csv](Data/sales_data_sample.csv)
+    - [sales_data_sample.json](Data/sales_data_sample.json)
     
     **Note**: This is a data downloaded from [Kaggle](https://www.kaggle.com) and locally refactored for this use case.
     
