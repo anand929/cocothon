@@ -4,6 +4,9 @@ This project establishes a multi-layered madillion data architecture (Bronze, Si
 ## Architecture Overview
 The project follows a modular Medallion Architecture:
 
+### Flow Diagram
+![Flow diagram](Coco_Flow_Diagram.png)
+
 ### Bronze Layer 
 Raw data ingestion with initial metadata (file formats and timestamps).
 ### Silver Layer
@@ -60,6 +63,9 @@ Filter data early in CTEs and avoid SELECT * in production code.
 **Repository structure**
 ```
 cocothon/
+├── Data/
+│   ├── sales_data_sample.csv
+│   ├── sales_data_sample.json
 ├── coco_dbt/
 │   ├── analyses/
 │   ├── logs/
@@ -76,6 +82,8 @@ cocothon/
 │   ├── tests/
 │   ├── dbt_project.yml
 │   ├── profiles.yml
+└── COCO_DBT_DAG.png
+└── Coco_Flow_Diagram.png
 └── README.md
 ```
 
