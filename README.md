@@ -22,7 +22,10 @@ Semantic views optimized for end-user consumption and reporting.
     
     **Note**: This is a data downloaded from [Kaggle](https://www.kaggle.com) and locally refactored for this use case.
     
-2. #### Snowflake Infrastructure
+2. #### Prompt Library
+    Refer [Agents.md](./Prompts/Agents.md) for all the prompts required for Cortex.
+    
+3. #### Snowflake Infrastructure
     Before running the dbt project, ensure the following objects are initialized in Snowflake:
 
     Database: `COCO_DB`.
@@ -32,7 +35,7 @@ Semantic views optimized for end-user consumption and reporting.
     Schemas: BRONZE, SILVER, and GOLD under COCO_DB.
 
     Internal Stage: Source data must be **manually loaded** into `SOURCE_DB.PUBLIC.STAGE_SOURCE_DATA`. Refer [Data setup](#Data setup) for data loading steps.
-3. #### RBAC (Role-Based Access Control)
+4. #### RBAC (Role-Based Access Control)
     The project uses a dedicated role, `ETL_USER`, with the following privileges:
 
     `USAGE` on `VW_COCO` warehouse, `SOURCE_DB` and `COCO_DB` (all current/future schemas).
@@ -66,6 +69,8 @@ cocothon/
 ├── Data/
 │   ├── sales_data_sample.csv
 │   ├── sales_data_sample.json
+├── Prompts/
+│   ├── Agents.md
 ├── coco_dbt/
 │   ├── analyses/
 │   ├── logs/
